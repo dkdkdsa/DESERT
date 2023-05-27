@@ -14,7 +14,7 @@ public class PlayerRoot : MonoBehaviour
 
         rigid = GetComponent<Rigidbody>();
         valueSystem = GetComponent<PlayerValueSystem>();
-        groundScncer = GetComponent<GroundScncer>();
+        groundScncer = GetComponentInChildren<GroundScncer>();
 
     }
 
