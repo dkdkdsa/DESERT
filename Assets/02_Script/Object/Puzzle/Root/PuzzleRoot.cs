@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuzzleRoot : MonoBehaviour
+public abstract class PuzzleRoot : MonoBehaviour
 {
-    
 
+    public abstract void PuzzleClearEvent();
 
 }
