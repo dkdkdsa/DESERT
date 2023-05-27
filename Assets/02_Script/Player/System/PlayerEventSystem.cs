@@ -24,7 +24,7 @@ public class PlayerEventSystem : MonoBehaviour
     {
 
         OnHorizontalAxisEvent?.Invoke(Input.GetAxisRaw("Horizontal"));
-        OnHorizontalAxisEvent?.Invoke(Input.GetAxisRaw("Vertical"));
+        OnVerticalAxisEvent?.Invoke(Input.GetAxisRaw("Vertical"));
         OnFixedUpdateEvent?.Invoke();
 
     }
