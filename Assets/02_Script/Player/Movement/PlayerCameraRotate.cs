@@ -25,6 +25,11 @@ public class PlayerCameraRotate : PlayerBehaviorRoot
         xValue += xInput * Time.fixedDeltaTime;
         yValue += yInput * Time.fixedDeltaTime;
 
+        yValue = Mathf.Clamp(yValue, -valueSystem.maxRotateAngle, valueSystem.maxRotateAngle);
+
+        cvcam.transform.eulerAngles = new Vector3(yValue, xValue);
+        transform.eulerAngles = new Vector3(0, xValue);
+
     }
 
     private void SetX(float v) { xInput = v; }

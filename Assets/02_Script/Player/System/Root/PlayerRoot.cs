@@ -6,11 +6,13 @@ public class PlayerRoot : MonoBehaviour
 {
 
     protected Rigidbody rigid;
+    protected PlayerValueSystem valueSystem;
 
     protected virtual void Awake()
     {
 
         rigid = GetComponent<Rigidbody>();
+        valueSystem = GetComponent<PlayerValueSystem>();
 
     }
 
