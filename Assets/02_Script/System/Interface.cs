@@ -8,7 +8,8 @@ namespace Interface
     public interface IEventObject
     {
 
-
+        public void AddEvent();
+        public void RemoveEvent();
 
     }
 
