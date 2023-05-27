@@ -8,6 +8,8 @@ public class PlayerEventSystem : MonoBehaviour
 
     public event Action<float> OnHorizontalAxisEvent;
     public event Action<float> OnVerticalAxisEvent;
+    public event Action<float> OnMouseXEvent;
+    public event Action<float> OnMouseYEvent;
     public event Action OnJumpKeyPressEvent;
     public event Action OnFixedUpdateEvent;
     public event Action OnUpdateEvent;
@@ -25,6 +27,8 @@ public class PlayerEventSystem : MonoBehaviour
 
         OnHorizontalAxisEvent?.Invoke(Input.GetAxisRaw("Horizontal"));
         OnVerticalAxisEvent?.Invoke(Input.GetAxisRaw("Vertical"));
+        OnMouseXEvent?.Invoke(Input.GetAxisRaw("Mouse X"));
+        OnMouseYEvent?.Invoke(Input.GetAxisRaw("Mouse Y"));
         OnFixedUpdateEvent?.Invoke();
 
     }
