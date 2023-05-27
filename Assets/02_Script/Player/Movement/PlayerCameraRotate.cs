@@ -22,12 +22,12 @@ public class PlayerCameraRotate : PlayerBehaviorRoot
     private void CameraRotate()
     {
 
-        xValue += xInput * Time.fixedDeltaTime;
-        yValue += yInput * Time.fixedDeltaTime;
+        xValue += xInput * Time.deltaTime * valueSystem.rotateSpeed;
+        yValue += yInput * Time.deltaTime * valueSystem.rotateSpeed;
 
         yValue = Mathf.Clamp(yValue, -valueSystem.maxRotateAngle, valueSystem.maxRotateAngle);
 
-        cvcam.transform.eulerAngles = new Vector3(yValue, xValue);
+        cvcam.transform.eulerAngles = new Vector3(-yValue, xValue);
         transform.eulerAngles = new Vector3(0, xValue);
 
     }
@@ -40,7 +40,7 @@ public class PlayerCameraRotate : PlayerBehaviorRoot
 
         eventSystem.OnMouseXEvent += SetX;
         eventSystem.OnMouseYEvent += SetY;
-        eventSystem.OnFixedUpdateEvent += CameraRotate;
+        eventSystem.OnUpdateEvent += CameraRotate;
 
     }
 
@@ -49,7 +49,7 @@ public class PlayerCameraRotate : PlayerBehaviorRoot
 
         eventSystem.OnMouseXEvent -= SetX;
         eventSystem.OnMouseYEvent -= SetY;
-        eventSystem.OnFixedUpdateEvent -= CameraRotate;
+        eventSystem.OnUpdateEvent -= CameraRotate;
 
     }
 }

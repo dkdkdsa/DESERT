@@ -8,5 +8,6 @@ public class PlayerValueSystem : MonoBehaviour
     [field: SerializeField] public float moveSpeed {  get; private set; }
     [field: SerializeField] public float rotateSpeed { get; private set; }
     [field: SerializeField] public float maxRotateAngle { get; private set; }
+    [field: SerializeField] public float jumpPower { get; private set; }
 
 }

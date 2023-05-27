@@ -13,7 +13,7 @@ public class PlayerMovement : PlayerBehaviorRoot
         var xVec = transform.forward * verInput;
         var yVec = transform.right * horInput;
 
-        var targetVec = (xVec + yVec).normalized;
+        var targetVec = (xVec + yVec).normalized * valueSystem.moveSpeed;
         targetVec.y = rigid.velocity.y;
 
         rigid.velocity = targetVec;
