@@ -9,11 +9,14 @@ public class PlayerEventSystem : MonoBehaviour
     public event Action<float> OnHorizontalAxisEvent;
     public event Action<float> OnVerticalAxisEvent;
     public event Action OnJumpKeyPressEvent;
+    public event Action OnFixedUpdateEvent;
+    public event Action OnUpdateEvent;
 
     private void Update()
     {
         
         JumpEventExecute();
+        OnUpdateEvent?.Invoke();
 
     }
 
@@ -22,6 +25,7 @@ public class PlayerEventSystem : MonoBehaviour
 
         OnHorizontalAxisEvent?.Invoke(Input.GetAxisRaw("Horizontal"));
         OnHorizontalAxisEvent?.Invoke(Input.GetAxisRaw("Vertical"));
+        OnFixedUpdateEvent?.Invoke();
 
     }
 

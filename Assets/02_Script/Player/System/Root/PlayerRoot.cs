@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerRoot : MonoBehaviour
 {
-    
-    protected CharacterController characterController;
+
+    protected Rigidbody rigid;
 
     protected virtual void Awake()
     {
 
-        characterController = GetComponent<CharacterController>();
+        rigid = GetComponent<Rigidbody>();
 
     }
 
