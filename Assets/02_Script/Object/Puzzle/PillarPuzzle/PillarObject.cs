@@ -11,13 +11,13 @@ public class PillarObject : PuzzleObjectRoot
         if(type == InteractionClickKey.Left) 
         {
 
-            transform.eulerAngles -= new Vector3(0, 10, 0) * Time.fixedDeltaTime;
+            transform.eulerAngles -= new Vector3(0, 10, 0) * Time.deltaTime;
 
         }
         else
         {
 
-            transform.eulerAngles += new Vector3(0, 10, 0) * Time.fixedDeltaTime;
+            transform.eulerAngles += new Vector3(0, 10, 0) * Time.deltaTime;
 
         }
 

@@ -1,3 +1,4 @@
+using Enum;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using UnityEngine;
 public class PlayerEventSystem : MonoBehaviour
 {
 
+    public event Action<InteractionClickKey> OnInteractionClickKeyEvent;
     public event Action<float> OnHorizontalAxisEvent;
     public event Action<float> OnVerticalAxisEvent;
     public event Action<float> OnMouseXEvent;
@@ -18,6 +20,7 @@ public class PlayerEventSystem : MonoBehaviour
     {
         
         JumpEventExecute();
+        InteractionEventExecute();
         OnUpdateEvent?.Invoke();
 
     }
@@ -37,6 +40,25 @@ public class PlayerEventSystem : MonoBehaviour
     {
 
         if (Input.GetKeyDown(KeyCode.Space)) OnJumpKeyPressEvent?.Invoke();
+
+    }
+
+    private void InteractionEventExecute()
+    {
+
+        //Left
+        if (Input.GetMouseButtonDown(0))
+        {
+
+            OnInteractionClickKeyEvent?.Invoke(InteractionClickKey.Left);
+
+        }
+        else if(Input.GetMouseButtonDown(1)) //right
+        {
+
+            OnInteractionClickKeyEvent?.Invoke(InteractionClickKey.Right);
+
+        }
 
     }
 
