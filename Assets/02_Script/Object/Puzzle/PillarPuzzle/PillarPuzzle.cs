@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PillarPuzzle : PuzzleRoot
 {
@@ -8,6 +9,7 @@ public class PillarPuzzle : PuzzleRoot
     [SerializeField] private float rotateSpeed;
     [SerializeField] private float targetAngle;
 
+    private UnityEvent puzzleClearEvt = null;
     private PillarObject[] puzzles;
 
     private void Awake()
@@ -61,6 +63,8 @@ public class PillarPuzzle : PuzzleRoot
             Destroy(puzzle);
 
         }
+
+        puzzleClearEvt?.Invoke();
 
         Destroy(this);
 
