@@ -34,7 +34,7 @@ public class PillarPuzzle : PuzzleRoot
         foreach(var puzzle in puzzles) 
         {
 
-            if (puzzle.transform.eulerAngles.y - targetAngle < 15f)
+            if (puzzle.transform.eulerAngles.y - targetAngle < 5f)
             {
 
                 clear = true;
