@@ -2,17 +2,67 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PillarPuzzle : MonoBehaviour
+public class PillarPuzzle : PuzzleRoot
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private float rotateSpeed;
+    [SerializeField] private float targetAngle;
+
+    private PillarObject[] puzzles;
+
+    private void Awake()
     {
         
+        puzzles = GetComponentsInChildren<PillarObject>();
+
+        foreach(var puzzle in puzzles) 
+        {
+
+            puzzle.SettingRotateSpeed(rotateSpeed);
+
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+
+        bool clear = false;
+
+        foreach(var puzzle in puzzles) 
+        {
+
+            if (puzzle.transform.eulerAngles.y - targetAngle < 15f)
+            {
+
+                clear = true;
+
+            }
+            else
+            {
+
+                clear = false;
+                break;
+
+            }
         
+        }
+
+        if(clear) PuzzleClearEvent();
+
+    }
+
+    public override void PuzzleClearEvent()
+    {
+
+        foreach(var puzzle in puzzles) 
+        { 
+            
+            Destroy(puzzle);
+
+        }
+
+        Destroy(this);
+
     }
 }

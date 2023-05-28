@@ -396,7 +396,8 @@ GameObject:
   - component: {fileID: 731784658}
   - component: {fileID: 731784657}
   - component: {fileID: 731784656}
-  m_Layer: 0
+  - component: {fileID: 731784661}
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,6 +498,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &731784661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731784655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2641db9e901b2e42b294777722929f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &762110240
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,6 +957,7 @@ GameObject:
   - component: {fileID: 1812980143}
   - component: {fileID: 1812980144}
   - component: {fileID: 1812980145}
+  - component: {fileID: 1812980146}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1088,6 +1102,9 @@ MonoBehaviour:
   <rotateSpeed>k__BackingField: 200
   <maxRotateAngle>k__BackingField: 70
   <jumpPower>k__BackingField: 7
+  <interactionMask>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &1812980143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,6 +1139,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2528859406b95c24a995ef8d7bfb9f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1812980146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812980134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17af1b799d884754e89c3ac28251fe1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2004984869

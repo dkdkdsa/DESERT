@@ -47,13 +47,13 @@ public class PlayerEventSystem : MonoBehaviour
     {
 
         //Left
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
 
             OnInteractionClickKeyEvent?.Invoke(InteractionClickKey.Left);
 
         }
-        else if(Input.GetMouseButtonDown(1)) //right
+        else if(Input.GetMouseButton(1)) //right
         {
 
             OnInteractionClickKeyEvent?.Invoke(InteractionClickKey.Right);
