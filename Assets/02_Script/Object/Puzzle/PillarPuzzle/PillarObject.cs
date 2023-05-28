@@ -7,6 +7,19 @@ public class PillarObject : PuzzleObjectRoot
 {
     public override void InteractionEvent(InteractionClickKey type)
     {
-        throw new System.NotImplementedException();
+        
+        if(type == InteractionClickKey.Left) 
+        {
+
+            transform.eulerAngles -= new Vector3(0, 10, 0) * Time.fixedDeltaTime;
+
+        }
+        else
+        {
+
+            transform.eulerAngles += new Vector3(0, 10, 0) * Time.fixedDeltaTime;
+
+        }
+
     }
 }
