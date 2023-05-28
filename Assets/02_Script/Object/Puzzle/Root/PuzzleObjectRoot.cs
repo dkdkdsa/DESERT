@@ -1,3 +1,4 @@
+using Enum;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,6 @@ using UnityEngine;
 public abstract class PuzzleObjectRoot : MonoBehaviour
 {
 
-    public abstract void InteractionEvent();
+    public abstract void InteractionEvent(InteractionClickKey type);
 
 }
