@@ -498,6 +498,7 @@ MonoBehaviour:
   taaMotionVectorRejection: 0
   taaAntiHistoryRinging: 0
   taaBaseBlendFactor: 0.875
+  taaJitterScale: 1
   physicalParameters:
     m_Iso: 200
     m_ShutterSpeed: 0.005
@@ -905,7 +906,7 @@ MonoBehaviour:
     widthCutoutStandard: 0.1
     widthCutoutGeometric: 0.1
     shape: 0
-    color: {r: 0.91372555, g: 0.078431375, b: 0.7843138, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
     colorTransparency: 1
     colorIntensity: 10
   edgeAdditionalColor:
