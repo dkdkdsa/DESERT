@@ -8,8 +8,8 @@ public class PillarPuzzle : PuzzleRoot
 
     [SerializeField] private float rotateSpeed;
     [SerializeField] private float targetAngle;
+    [SerializeField] private UnityEvent puzzleClearEvt = null;
 
-    private UnityEvent puzzleClearEvt = null;
     private PillarObject[] puzzles;
 
     private void Awake()

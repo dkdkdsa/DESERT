@@ -37,13 +37,15 @@ Material:
   - _AD_EDGE_ADDITIONAL_COLOR_NONE
   - _AD_EDGE_UV_DISTORTION_SOURCE_DEFAULT
   - _AD_GLOBAL_CONTROL_ID_NONE
+  - _ALPHATEST_ON
   - _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2225
+  m_CustomRenderQueue: 2475
   stringTagMap:
     MotionVector: User
+    RenderType: TransparentCutout
   disabledShaderPasses:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
@@ -377,7 +379,7 @@ Material:
     m_Colors:
     - _AdvancedDissolveBakedKeywords: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric1Normal: {r: -0.8660255, g: -0.000000052154064, b: -0.4999999, a: 0}
-    - _AdvancedDissolveCutoutGeometric1Position: {r: 10.93, g: 3.4, b: 42.41, a: 0}
+    - _AdvancedDissolveCutoutGeometric1Position: {r: 11.12, g: 3.4, b: 42.51, a: 0}
     - _AdvancedDissolveCutoutGeometric2Normal: {r: 1, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric2Position: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric3Normal: {r: 1, g: 0, b: 0, a: 0}
@@ -399,8 +401,8 @@ Material:
     - _AdvancedDissolveEdgeAdditionalColorMapOffset: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveEdgeAdditionalColorMapScroll: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveEdgeAdditionalColorMapTiling: {r: 1, g: 1, b: 0, a: 0}
-    - _AdvancedDissolveEdgeBaseColor: {r: 0.8148468, g: 0.21586053, b: 0.015208514, a: 1}
-    - _AdvancedDissolveEdgeBaseColorIntensity: {r: 11, g: 59873.14, b: 0, a: 0}
+    - _AdvancedDissolveEdgeBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _AdvancedDissolveEdgeBaseColorIntensity: {r: 13.4, g: 660002, b: 0, a: 0}
     - _AdvancedDissolveEdgeUVDistortionMapOffset: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveEdgeUVDistortionMapScroll: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveEdgeUVDistortionMapTiling: {r: 1, g: 1, b: 0, a: 0}
