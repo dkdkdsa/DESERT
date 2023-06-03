@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ShipMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private float endZ;
+    [SerializeField] private float moveSpd;
+
+    private void FixedUpdate()
     {
         
+        transform.Translate(transform.forward * Time.fixedDeltaTime * moveSpd);
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
