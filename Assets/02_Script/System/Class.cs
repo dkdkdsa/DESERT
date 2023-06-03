@@ -40,7 +40,7 @@ namespace Class
 
             }
 
-            return (sinVel / (xVel * 2)) + 0.5f;
+            return (sinVel / (xVel * 2));
 
         }
 
