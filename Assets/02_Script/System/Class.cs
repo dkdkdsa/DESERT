@@ -10,7 +10,7 @@ namespace Class
     {
 
         [field:SerializeField] public float x { get; private set; }
-        [field: SerializeField] public float y { get; private set; }
+        [field:SerializeField] public float y { get; private set; }
 
         public float GetSineGrahp()
         {
