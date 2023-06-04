@@ -17,7 +17,7 @@ public class ShipMove : MonoBehaviour
         {
 
             endEvt?.Invoke();
-            return;
+            Destroy(this);
 
         }
 
