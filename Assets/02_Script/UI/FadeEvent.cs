@@ -15,4 +15,11 @@ public class FadeEvent : MonoBehaviour
 
     }
 
+    public void FadeIn()
+    {
+
+
+
+    }
+
 }
