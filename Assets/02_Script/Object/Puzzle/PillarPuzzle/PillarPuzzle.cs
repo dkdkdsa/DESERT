@@ -34,7 +34,9 @@ public class PillarPuzzle : PuzzleRoot
         foreach(var puzzle in puzzles) 
         {
 
-            if (Mathf.Abs(puzzle.transform.eulerAngles.y - targetAngle) < 5f)
+            Debug.Log(Mathf.Abs(puzzle.transform.eulerAngles.y - targetAngle));
+
+            if (Mathf.Abs(puzzle.transform.eulerAngles.y - targetAngle) < 15f)
             {
 
                 clear = true;

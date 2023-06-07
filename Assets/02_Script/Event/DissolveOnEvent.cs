@@ -8,13 +8,6 @@ public class DissolveOnEvent : EventRoot
     [SerializeField] private float dissolveTime;
     [SerializeField] private Renderer[] dissolveRenderers;
 
-    private void Start()
-    {
-
-        StartEvent();
-
-    }
-
     public override void StartEvent()
     {
 
