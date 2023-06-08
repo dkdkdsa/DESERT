@@ -18,7 +18,12 @@ public class PositionChangeObjcet : InteractionObjectRoot
     public override void OnCursorClickEvent(InteractionClickKey key)
     {
 
-        
+        if(key == InteractionClickKey.Left)
+        {
+
+
+
+        }
 
     }
 
