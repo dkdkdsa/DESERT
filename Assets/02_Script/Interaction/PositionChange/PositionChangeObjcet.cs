@@ -21,7 +21,11 @@ public class PositionChangeObjcet : InteractionObjectRoot
         if(key == InteractionClickKey.Left)
         {
 
+            var curTrm = transform.position;
+            var rutTrm = playerTrm.position;
 
+            transform.position = rutTrm;
+            playerTrm.position = curTrm;
 
         }
 
