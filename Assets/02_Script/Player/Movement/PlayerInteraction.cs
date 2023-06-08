@@ -17,18 +17,26 @@ public class PlayerInteraction : PlayerBehaviorRoot
 
     }
 
-    private void Interaction(InteractionClickKey key)
+    private void InteractionOn()
     {
+
         var ray = cam.ScreenPointToRay(new Vector2((cam.pixelWidth - 1) / 2, (cam.pixelHeight - 1) / 2));
-        if(Physics.Raycast(ray, out var hit, valueSystem.interactionMask))
+        if (Physics.Raycast(ray, out var hit, 30, valueSystem.interactionMask))
         {
 
-            if(hit.transform.TryGetComponent<PuzzleObjectRoot>(out var puzzle))
-            {
 
-                puzzle.InteractionEvent(key);
 
-            }
+        }
+
+    }
+
+    private void InteractionClick(InteractionClickKey key)
+    {
+        var ray = cam.ScreenPointToRay(new Vector2((cam.pixelWidth - 1) / 2, (cam.pixelHeight - 1) / 2));
+        if(Physics.Raycast(ray, out var hit, 30, valueSystem.interactionMask))
+        {
+            
+
 
         }
 
@@ -37,14 +45,16 @@ public class PlayerInteraction : PlayerBehaviorRoot
     public override void AddEvent()
     {
 
-        eventSystem.OnInteractionClickKeyEvent += Interaction;
+        eventSystem.OnInteractionClickKeyPressEvent += InteractionClick;
+        eventSystem.OnUpdateEvent += InteractionOn;
 
     }
 
     public override void RemoveEvent()
     {
 
-        eventSystem.OnInteractionClickKeyEvent -= Interaction;
+        eventSystem.OnInteractionClickKeyPressEvent -= InteractionClick;
+        eventSystem.OnUpdateEvent -= InteractionOn;
 
     }
 }

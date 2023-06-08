@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerEventSystem : MonoBehaviour
 {
 
-    public event Action<InteractionClickKey> OnInteractionClickKeyEvent;
+    public event Action<InteractionClickKey> OnInteractionClickKeyPressEvent;
     public event Action<float> OnHorizontalAxisEvent;
     public event Action<float> OnVerticalAxisEvent;
     public event Action<float> OnMouseXEvent;
@@ -46,17 +46,16 @@ public class PlayerEventSystem : MonoBehaviour
     private void InteractionEventExecute()
     {
 
-        //Left
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
 
-            OnInteractionClickKeyEvent?.Invoke(InteractionClickKey.Left);
+            OnInteractionClickKeyPressEvent?.Invoke(InteractionClickKey.Left);
 
         }
-        else if(Input.GetMouseButton(1)) //right
+        else if(Input.GetMouseButtonDown(1)) 
         {
 
-            OnInteractionClickKeyEvent?.Invoke(InteractionClickKey.Right);
+            OnInteractionClickKeyPressEvent?.Invoke(InteractionClickKey.Right);
 
         }
 
