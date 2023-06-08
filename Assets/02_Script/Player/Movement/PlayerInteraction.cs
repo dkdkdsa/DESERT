@@ -12,9 +12,9 @@ public class PlayerInteraction : PlayerBehaviorRoot
     {
 
         base.Awake();
-
+    
         cam = Camera.main;
-
+    
     }
 
     private void InteractionOn()
@@ -57,4 +57,5 @@ public class PlayerInteraction : PlayerBehaviorRoot
         eventSystem.OnUpdateEvent -= InteractionOn;
 
     }
+
 }
