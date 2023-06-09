@@ -24,7 +24,12 @@ public class PlayerInteraction : PlayerBehaviorRoot
         if (Physics.Raycast(ray, out var hit, 30, valueSystem.interactionMask))
         {
 
+            if(hit.transform.TryGetComponent<InteractionObjectRoot>(out var copo))
+            {
 
+
+
+            }
 
         }
 
