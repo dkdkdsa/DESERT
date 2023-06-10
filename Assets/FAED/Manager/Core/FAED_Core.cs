@@ -29,7 +29,7 @@ namespace FD.System.Core
                 GameObject go = new GameObject();
                 instance = go.AddComponent<FAED_Core>();
                 DontDestroyOnLoad(go);
-                var so = Resources.Load<FAED_SettingSO>("FAED/Setting/FAEDSetting");
+                var so = Resources.Load<FAED_SettingSO>("FAED/Setting/SettingData");
 
                 if (poolManager == null && so.usePooling == true)
                 {

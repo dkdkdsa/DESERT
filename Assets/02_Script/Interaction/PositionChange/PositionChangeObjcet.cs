@@ -57,33 +57,35 @@ public class PositionChangeObjcet : InteractionObjectRoot
 
         float per = 0;
 
-        while (per < 1)
+        CameraManager.instance.CameraShake(1, 1, 0.5f);
+
+        while (CameraManager.instance.GetFOV() > 50)
         {
 
-            per += Time.deltaTime;
+            per += Time.deltaTime * 3;
             CameraManager.instance.SetFOV(
-                Mathf.Lerp(CameraManager.instance.GetFOV(), 50, per));
+                Mathf.Lerp(60, 50, per));
             yield return null;
 
         }
-
-        yield return new WaitForSeconds(0.5f);
 
         ChangePosition();
 
         yield return new WaitForSeconds(0.01f);
 
-        while (per < 1)
+        while (CameraManager.instance.GetFOV() > 60)
         {
 
-            per += Time.deltaTime * 5;
+            per += Time.deltaTime;
             CameraManager.instance.SetFOV(
-                Mathf.Lerp(CameraManager.instance.GetFOV(), 60, per));
+                Mathf.Lerp(50, 60, per));
             yield return null;
 
 
 
         }
+
+        CameraManager.instance.SetFOV(60);
 
         isPosChanging = false;
 
