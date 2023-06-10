@@ -27,7 +27,7 @@ public class PlayerInteraction : PlayerBehaviorRoot
             if(hit.transform.TryGetComponent<InteractionObjectRoot>(out var copo))
             {
 
-
+                copo.OnCursorOnEvent();
 
             }
 
@@ -40,7 +40,13 @@ public class PlayerInteraction : PlayerBehaviorRoot
         var ray = cam.ScreenPointToRay(new Vector2((cam.pixelWidth - 1) / 2, (cam.pixelHeight - 1) / 2));
         if(Physics.Raycast(ray, out var hit, 30, valueSystem.interactionMask))
         {
-            
+
+            if (hit.transform.TryGetComponent<InteractionObjectRoot>(out var copo))
+            {
+
+                copo.OnCursorClickEvent(key);
+
+            }
 
 
         }
