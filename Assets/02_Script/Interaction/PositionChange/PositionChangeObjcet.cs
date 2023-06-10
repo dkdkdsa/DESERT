@@ -22,11 +22,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
         if(key == InteractionClickKey.Left && Vector3.Distance(transform.position, playerTrm.position) <= sencingRange)
         {
 
-            var curTrm = transform.position;
-            var rutTrm = playerTrm.position;
 
-            transform.position = rutTrm;
-            playerTrm.position = curTrm;
 
         }
 
@@ -36,6 +32,27 @@ public class PositionChangeObjcet : InteractionObjectRoot
     {
 
         if (Vector3.Distance(transform.position, playerTrm.position) > sencingRange) return;
+
+    }
+
+    private void ChangePosition()
+    {
+
+        var curTrm = transform.position;
+        var rutTrm = playerTrm.position;
+
+        transform.position = rutTrm;
+        playerTrm.position = curTrm;
+
+    }
+
+    private IEnumerator PosChangeCo()
+    {
+
+        yield return null;
+
+
+
 
     }
 
