@@ -6,6 +6,7 @@ using UnityEngine;
 public class PositionChangeObjcet : InteractionObjectRoot
 {
 
+    [SerializeField] private float sencingRange = 5;
     private Transform playerTrm;
 
     private void Awake()
@@ -18,7 +19,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
     public override void OnCursorClickEvent(InteractionClickKey key)
     {
 
-        if(key == InteractionClickKey.Left)
+        if(key == InteractionClickKey.Left && Vector3.Distance(transform.position, playerTrm.position) <= sencingRange)
         {
 
             var curTrm = transform.position;
@@ -34,7 +35,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
     public override void OnCursorOnEvent()
     {
 
-        //나중에 UI 추가 예정
+        if (Vector3.Distance(transform.position, playerTrm.position) > sencingRange) return;
 
     }
 
