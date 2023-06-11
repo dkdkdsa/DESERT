@@ -9,11 +9,13 @@ public class PositionChangeObjcet : InteractionObjectRoot
     [SerializeField] private float sencingRange = 5;
 
     private Transform playerTrm;
+    private PlayerController playerController;
     private bool isPosChanging = false;
 
     private void Awake()
     {
 
+        playerController = FindObjectOfType<PlayerController>();
         playerTrm = GameObject.Find("Player").transform;
 
     }
@@ -52,6 +54,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
     {
 
         isPosChanging = true;
+        playerController.RemoveAll();
 
         yield return null;
 
@@ -86,7 +89,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
         }
 
         CameraManager.instance.SetFOV(60);
-
+        playerController.AddAll();
         isPosChanging = false;
 
     }
