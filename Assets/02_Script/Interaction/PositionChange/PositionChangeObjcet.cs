@@ -68,7 +68,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
         while (CameraManager.instance.GetFOV() > 50)
         {
 
-            per += Time.deltaTime * 3;
+            per += Time.deltaTime;
             CameraManager.instance.SetFOV(
                 Mathf.Lerp(60, 40, per));
             yield return null;
