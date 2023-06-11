@@ -10,6 +10,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
 
     private Transform playerTrm;
     private PlayerController playerController;
+    private Rigidbody playerRigid;
     private bool isPosChanging = false;
 
     private void Awake()
@@ -17,6 +18,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
 
         playerController = FindObjectOfType<PlayerController>();
         playerTrm = GameObject.Find("Player").transform;
+        playerRigid = playerTrm.GetComponent<Rigidbody>();
 
     }
 
@@ -55,19 +57,20 @@ public class PositionChangeObjcet : InteractionObjectRoot
 
         isPosChanging = true;
         playerController.RemoveAll();
+        playerRigid.velocity = Vector3.zero;
 
         yield return null;
 
         float per = 0;
 
-        CameraManager.instance.CameraShake(1, 1, 0.5f);
+        CameraManager.instance.CameraShake(0.5f, 0.25f, 0.5f);
 
         while (CameraManager.instance.GetFOV() > 50)
         {
 
             per += Time.deltaTime * 3;
             CameraManager.instance.SetFOV(
-                Mathf.Lerp(60, 50, per));
+                Mathf.Lerp(60, 40, per));
             yield return null;
 
         }
@@ -81,10 +84,8 @@ public class PositionChangeObjcet : InteractionObjectRoot
 
             per += Time.deltaTime;
             CameraManager.instance.SetFOV(
-                Mathf.Lerp(50, 60, per));
+                Mathf.Lerp(40, 60, per));
             yield return null;
-
-
 
         }
 
