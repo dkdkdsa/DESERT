@@ -7,8 +7,12 @@ public class DissolveObject : MonoBehaviour
 
     [SerializeField] private InteractionObjectRoot[] interactionObjects;
 
+    private Collider objCol;
+
     private void Awake()
     {
+        objCol = GetComponent<Collider>();
+        if (objCol != null) objCol.enabled = false;
 
         foreach (var interactionObject in interactionObjects)
         {
@@ -21,6 +25,8 @@ public class DissolveObject : MonoBehaviour
 
     public void EnableObject()
     {
+
+        if (objCol != null) objCol.enabled = true;
 
         foreach (var interactionObject in interactionObjects)
         {
