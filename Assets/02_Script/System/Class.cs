@@ -55,4 +55,13 @@ namespace Class
 
     }
 
+    [System.Serializable]
+    public class ObjectManageClass
+    {
+
+        public string key;
+        public List<GameObject> managedObjects = new List<GameObject>();
+
+    }
+
 }
