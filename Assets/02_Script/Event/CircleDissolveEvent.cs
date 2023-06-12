@@ -19,6 +19,7 @@ public class CircleDissolveEvent : EventRoot
 
         startingDissolve = true;
 
+        CameraManager.instance.CameraShake(10f, 10f, 0.1f);
         StartCoroutine(StartDissolveCo());
 
     }
