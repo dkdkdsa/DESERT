@@ -60,7 +60,7 @@ namespace Class
     {
 
         public string key;
-        public List<GameObject> managedObjects = new List<GameObject>();
+        public List<DissolveObject> managedObjects = new List<DissolveObject>();
 
     }
 

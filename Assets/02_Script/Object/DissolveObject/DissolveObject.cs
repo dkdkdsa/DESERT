@@ -11,15 +11,9 @@ public class DissolveObject : MonoBehaviour
 
     private void Awake()
     {
+
         objCol = GetComponent<Collider>();
-        if (objCol != null) objCol.enabled = false;
-
-        foreach (var interactionObject in interactionObjects)
-        {
-
-            interactionObject.enabled = false;
-
-        }
+        DisableObject();
 
     }
 
@@ -32,6 +26,20 @@ public class DissolveObject : MonoBehaviour
         {
 
             interactionObject.enabled = true;
+
+        }
+
+    }
+
+    public void DisableObject()
+    {
+
+        if (objCol != null) objCol.enabled = false;
+
+        foreach (var interactionObject in interactionObjects)
+        {
+
+            interactionObject.enabled = false;
 
         }
 
