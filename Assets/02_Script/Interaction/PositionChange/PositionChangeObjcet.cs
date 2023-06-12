@@ -70,7 +70,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
 
             per += Time.deltaTime;
             CameraManager.instance.SetFOV(
-                Mathf.Lerp(60, 40, per));
+                Mathf.Lerp(60, 20, per));
             yield return null;
 
         }
@@ -79,12 +79,12 @@ public class PositionChangeObjcet : InteractionObjectRoot
 
         yield return new WaitForSeconds(0.01f);
 
-        while (CameraManager.instance.GetFOV() > 60)
+        while (CameraManager.instance.GetFOV() < 60)
         {
 
-            per += Time.deltaTime;
+            per += Time.deltaTime * 3;
             CameraManager.instance.SetFOV(
-                Mathf.Lerp(40, 60, per));
+                Mathf.Lerp(20, 60, per));
             yield return null;
 
         }
