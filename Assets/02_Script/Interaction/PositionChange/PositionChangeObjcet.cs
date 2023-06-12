@@ -2,6 +2,7 @@ using Enums;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PositionChangeObjcet : InteractionObjectRoot
 {
@@ -9,6 +10,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
     [SerializeField] private float sencingRange = 5;
 
     private Transform playerTrm;
+    private Image fadeImage;
     private PlayerController playerController;
     private Rigidbody playerRigid;
     private bool isPosChanging = false;
@@ -19,6 +21,13 @@ public class PositionChangeObjcet : InteractionObjectRoot
         playerController = FindObjectOfType<PlayerController>();
         playerTrm = GameObject.Find("Player").transform;
         playerRigid = playerTrm.GetComponent<Rigidbody>();
+
+    }
+
+    private void Start()
+    {
+
+        fadeImage = UIManager.instance.GetUIObject<Image>("FadeImage");
 
     }
 
@@ -68,6 +77,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
         while (CameraManager.instance.GetFOV() > 50)
         {
 
+            fadeImage.color = new Color(0, 0, 0, per);
             per += Time.deltaTime;
             CameraManager.instance.SetFOV(
                 Mathf.Lerp(60, 20, per));
@@ -82,6 +92,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
         while (CameraManager.instance.GetFOV() < 60)
         {
 
+            fadeImage.color = new Color(0, 0, 0, 1 - per);
             per += Time.deltaTime * 3;
             CameraManager.instance.SetFOV(
                 Mathf.Lerp(20, 60, per));
@@ -89,6 +100,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
 
         }
 
+        fadeImage.color = new Color(0, 0, 0, 0);
         CameraManager.instance.SetFOV(60);
         playerController.AddAll();
         isPosChanging = false;
