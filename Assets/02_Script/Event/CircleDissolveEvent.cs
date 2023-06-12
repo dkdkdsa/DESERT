@@ -1,3 +1,4 @@
+using AmazingAssets.AdvancedDissolve;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,7 +33,7 @@ public class CircleDissolveEvent : EventRoot
         while (per < 1) 
         { 
             
-            per += Time.deltaTime;
+            per += Time.deltaTime * dissolveSpeed;
             dissolveManageObject.transform.localScale
                 = Vector3.Lerp(dissolveManageObject.transform.localScale
                 , dissolveScale, per);
