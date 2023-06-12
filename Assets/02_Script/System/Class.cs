@@ -46,4 +46,13 @@ namespace Class
 
     }
 
+    [System.Serializable]
+    public class UIManagedClass
+    {
+
+        public string key;
+        public GameObject uiObject;
+
+    }
+
 }
