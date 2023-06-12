@@ -1750,10 +1750,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1986069906697178171, guid: dd12984957c0d434a987ed98d89059da, type: 3}
       propertyPath: target1Radius
-      value: 1.87
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1986069907408648207, guid: dd12984957c0d434a987ed98d89059da, type: 3}
       propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986069907408648207, guid: dd12984957c0d434a987ed98d89059da, type: 3}
+      propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
