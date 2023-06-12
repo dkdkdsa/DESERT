@@ -31,4 +31,18 @@ public class ObjectManager : MonoBehaviour
             
     }
 
+    public void DisableObject(string key)
+    {
+
+        var obj = manageClasses.Find(x => x.key == key);
+
+        foreach (var item in obj.managedObjects)
+        {
+
+            item.DisableObject();
+
+        }
+
+    }
+
 }
