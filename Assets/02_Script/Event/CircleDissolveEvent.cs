@@ -8,6 +8,7 @@ public class CircleDissolveEvent : EventRoot
 
     [SerializeField] private GameObject dissolveManageObject;
     [SerializeField] private Vector3 dissolveScale;
+    [SerializeField] private string dissolveObjectKey;
     [SerializeField] private float dissolveSpeed;
 
     private bool startingDissolve;
@@ -31,6 +32,8 @@ public class CircleDissolveEvent : EventRoot
 
         float per = 0;
 
+        ObjectManager.instance.EnableObject(dissolveObjectKey);
+        
         while (per < 1) 
         { 
             
