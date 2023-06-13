@@ -1861,6 +1861,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1986069906227516814, guid: dd12984957c0d434a987ed98d89059da, type: 3}
+      propertyPath: dissolveSpeed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986069906227516814, guid: dd12984957c0d434a987ed98d89059da, type: 3}
+      propertyPath: dissolveScale.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986069906227516814, guid: dd12984957c0d434a987ed98d89059da, type: 3}
+      propertyPath: dissolveScale.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986069906227516814, guid: dd12984957c0d434a987ed98d89059da, type: 3}
+      propertyPath: dissolveScale.z
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986069906227516814, guid: dd12984957c0d434a987ed98d89059da, type: 3}
       propertyPath: dissolveObjectKey
       value: Test
       objectReference: {fileID: 0}

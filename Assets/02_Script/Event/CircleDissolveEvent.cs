@@ -70,7 +70,7 @@ public class CircleDissolveEvent : EventRoot
         while (per < 1)
         {
 
-            per += Time.deltaTime * dissolveSpeed;
+            per += Time.deltaTime * 10;
             dissolveManageObject.transform.localScale
                 = Vector3.Lerp(dissolveManageObject.transform.localScale
                 , new Vector3(0.8f, 0.8f, 0.8f), per);
