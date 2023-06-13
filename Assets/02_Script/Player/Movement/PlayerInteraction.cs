@@ -2,6 +2,7 @@ using Enums;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerInteraction : PlayerBehaviorRoot
 {
@@ -21,10 +22,12 @@ public class PlayerInteraction : PlayerBehaviorRoot
     {
 
         var ray = cam.ScreenPointToRay(new Vector2((cam.pixelWidth - 1) / 2, (cam.pixelHeight - 1) / 2));
-        if (Physics.Raycast(ray, out var hit, 30, valueSystem.interactionMask))
+        if (Physics.Raycast(ray, out var hit, 30))
         {
 
-            if(hit.transform.TryGetComponent<InteractionObjectRoot>(out var copo))
+            if (!hit.transform.CompareTag("Interaction")) return;
+
+            if (hit.transform.TryGetComponent<InteractionObjectRoot>(out var copo))
             {
 
                 copo.OnCursorOnEvent();
@@ -38,8 +41,10 @@ public class PlayerInteraction : PlayerBehaviorRoot
     private void InteractionClick(InteractionClickKey key)
     {
         var ray = cam.ScreenPointToRay(new Vector2((cam.pixelWidth - 1) / 2, (cam.pixelHeight - 1) / 2));
-        if(Physics.Raycast(ray, out var hit, 30, valueSystem.interactionMask))
+        if(Physics.Raycast(ray, out var hit, 30))
         {
+
+            if (!hit.transform.CompareTag("Interaction")) return;
 
             if (hit.transform.TryGetComponent<InteractionObjectRoot>(out var copo))
             {

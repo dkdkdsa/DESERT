@@ -13,11 +13,13 @@ public class PositionChangeObjcet : InteractionObjectRoot
     private Image fadeImage;
     private PlayerController playerController;
     private Rigidbody playerRigid;
+    private SineFlootingObject flootingObject;
     private bool isPosChanging = false;
 
     private void Awake()
     {
 
+        flootingObject = GetComponent<SineFlootingObject>();
         playerController = FindObjectOfType<PlayerController>();
         playerTrm = GameObject.Find("Player").transform;
         playerRigid = playerTrm.GetComponent<Rigidbody>();
@@ -58,6 +60,8 @@ public class PositionChangeObjcet : InteractionObjectRoot
 
         transform.position = rutTrm;
         playerTrm.position = curTrm;
+
+        flootingObject.offsetY = rutTrm.y;
 
     }
 

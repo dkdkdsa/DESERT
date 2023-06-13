@@ -8,7 +8,7 @@ public class SineFlootingObject : MonoBehaviour
 
     [SerializeField] private SineAdd rotateSine;
 
-    private float offsetY;
+    public float offsetY { get; set; }
 
     private void Awake()
     {
