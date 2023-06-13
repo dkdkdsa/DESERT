@@ -9,8 +9,15 @@ public class RotateObject : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
 
+        Rotate();
+
+    }
+
+    private void Rotate()
+    {
+
+        transform.eulerAngles += new Vector3(0, rotateSpeed * Time.fixedDeltaTime, 0);
 
     }
 
