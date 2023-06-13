@@ -11,17 +11,27 @@ public class CircleDissolveEvent : EventRoot
     [SerializeField] private string dissolveObjectKey;
     [SerializeField] private float dissolveSpeed;
 
-    private bool startingDissolve;
+    private bool isOn = false;
 
     public override void StartEvent()
     {
 
-        if (startingDissolve) return;
-
-        startingDissolve = true;
-
+        isOn = !isOn;
         CameraManager.instance.CameraShake(10f, 10f, 0.1f);
-        StartCoroutine(StartDissolveCo());
+
+        if (isOn)
+        {
+
+            StartCoroutine(StartDissolveCo());
+
+        }
+        else
+        {
+
+            StartCoroutine(EndDissolveCo());
+
+        }
+
 
     }
 
@@ -48,4 +58,27 @@ public class CircleDissolveEvent : EventRoot
         endEvent?.Invoke();
 
     }
+
+    private IEnumerator EndDissolveCo()
+    {
+
+        yield return null;
+
+        float per = 0;
+
+
+        while (per < 1)
+        {
+
+            per += Time.deltaTime * dissolveSpeed;
+            dissolveManageObject.transform.localScale
+                = Vector3.Lerp(dissolveManageObject.transform.localScale
+                , new Vector3(0.8f, 0.8f, 0.8f), per);
+            yield return null;
+
+        }
+        ObjectManager.instance.DisableObject(dissolveObjectKey);
+
+    }
+
 }
