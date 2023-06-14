@@ -26,7 +26,7 @@ public class PlayerLookObject : MonoBehaviour
     {
 
         var fwd = playerTrm.position - transform.position;
-        fwd.y = transform.position.y;
+        fwd.y = 0;
 
         transform.rotation = Quaternion.LookRotation(-fwd);
 
