@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1981593706597079959
+--- !u!114 &-2440680935169636505
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -23,7 +23,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TestDissolveMat
+  m_Name: M_windowlight_Dissolve
   m_Shader: {fileID: 4800000, guid: 83590dfb53f017f4d96a8e9cdb65955c, type: 3}
   m_ValidKeywords:
   - _AD_CUTOUT_GEOMETRIC_COUNT_THREE
@@ -56,7 +56,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AdvancedDissolveCutoutStandardMap1:
-        m_Texture: {fileID: 2800000, guid: 15156bfb2d3680b42b640ccf7d864400, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1ab69e9b96ad9f5409665263c3c8dc31, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AdvancedDissolveCutoutStandardMap2:
@@ -177,7 +177,7 @@ Material:
     - _AdvancedDissolveCutoutGeometric1Height: 1
     - _AdvancedDissolveCutoutGeometric1Radius: 0.5
     - _AdvancedDissolveCutoutGeometric2Height: 1
-    - _AdvancedDissolveCutoutGeometric2Radius: 0.5
+    - _AdvancedDissolveCutoutGeometric2Radius: 1
     - _AdvancedDissolveCutoutGeometric3Height: 1
     - _AdvancedDissolveCutoutGeometric3Radius: 1
     - _AdvancedDissolveCutoutGeometric4Height: 1
@@ -210,7 +210,7 @@ Material:
     - _AdvancedDissolveEdgeAdditionalColorTransparency: 1
     - _AdvancedDissolveEdgeBaseColorTransparency: 1
     - _AdvancedDissolveEdgeBaseShape: 0
-    - _AdvancedDissolveEdgeBaseWidthGeometric: 0.1
+    - _AdvancedDissolveEdgeBaseWidthGeometric: 0.3
     - _AdvancedDissolveEdgeBaseWidthStandard: 0.1
     - _AdvancedDissolveEdgeGIMetaPassMultiplier: 1
     - _AdvancedDissolveEdgeUVDistortionStrength: 0
@@ -310,7 +310,7 @@ Material:
     - _StencilWriteMaskDepth: 8
     - _StencilWriteMaskDistortionVec: 4
     - _StencilWriteMaskGBuffer: 14
-    - _StencilWriteMaskMV: 40
+    - _StencilWriteMaskMV: 42
     - _SubsurfaceMask: 1
     - _SupportDecals: 1
     - _SurfaceType: 0
@@ -337,9 +337,9 @@ Material:
     m_Colors:
     - _AdvancedDissolveBakedKeywords: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric1Normal: {r: 1, g: 0, b: 0, a: 0}
-    - _AdvancedDissolveCutoutGeometric1Position: {r: 9, g: 4.000001, b: 87, a: 0}
+    - _AdvancedDissolveCutoutGeometric1Position: {r: 7.8999996, g: 6.1899996, b: 84.520004, a: 0}
     - _AdvancedDissolveCutoutGeometric2Normal: {r: 1, g: 0, b: 0, a: 0}
-    - _AdvancedDissolveCutoutGeometric2Position: {r: -0.922, g: 1.472, b: 0.129, a: 0}
+    - _AdvancedDissolveCutoutGeometric2Position: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric3Normal: {r: 1, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric3Position: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric4Normal: {r: 1, g: 0, b: 0, a: 0}
@@ -364,9 +364,9 @@ Material:
     - _AdvancedDissolveEdgeUVDistortionMapOffset: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveEdgeUVDistortionMapScroll: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveEdgeUVDistortionMapTiling: {r: 1, g: 1, b: 0, a: 0}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.09019608, g: 0.09019608, b: 0.09019608, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.090196066, g: 0.090196066, b: 0.090196066, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

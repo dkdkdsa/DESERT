@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DissolveOnEvent : EventRoot
+public class DissolveOffEvent : EventRoot
 {
+
 
     [SerializeField] private float dissolveTime;
     [SerializeField] private Renderer[] dissolveRenderers;
@@ -11,25 +12,24 @@ public class DissolveOnEvent : EventRoot
     public override void StartEvent()
     {
 
-        StartCoroutine(DissolveOnCo());
+        StartCoroutine(DissolveOffCo());
 
     }
 
-    private IEnumerator DissolveOnCo()
+    private IEnumerator DissolveOffCo()
     {
 
         float per = 1;
 
-        while(per > 0)
+        while (per > 0)
         {
-
             per -= Time.deltaTime / dissolveTime;
 
-            foreach(var item in dissolveRenderers) 
+            foreach (var item in dissolveRenderers)
             {
 
-                item.material.SetFloat("_AdvancedDissolveCutoutStandardClip", per);
-            
+                item.material.SetFloat("_AdvancedDissolveCutoutStandardClip", 1 - per);
+
             }
 
             yield return null;
@@ -39,5 +39,4 @@ public class DissolveOnEvent : EventRoot
         endEvent?.Invoke();
 
     }
-
 }

@@ -42,12 +42,12 @@ public class CircleDissolveEvent : EventRoot
 
         float per = 0;
 
-        ObjectManager.instance.EnableObject(dissolveObjectKey);
+        ObjectManager.instance?.EnableObject(dissolveObjectKey);
         
         while (per < 1) 
         { 
             
-            per += Time.deltaTime * 0.5f;
+            per += Time.deltaTime * dissolveSpeed;
             dissolveManageObject.transform.localScale
                 = Vector3.Lerp(dissolveManageObject.transform.localScale
                 , dissolveScale, per);
@@ -70,7 +70,7 @@ public class CircleDissolveEvent : EventRoot
         while (per < 1)
         {
 
-            per += Time.deltaTime * 0.5f;
+            per += Time.deltaTime * dissolveSpeed;
             dissolveManageObject.transform.localScale
                 = Vector3.Lerp(dissolveManageObject.transform.localScale
                 , new Vector3(0.8f, 0.8f, 0.8f), per);
@@ -78,7 +78,7 @@ public class CircleDissolveEvent : EventRoot
 
         }
 
-        ObjectManager.instance.DisableObject(dissolveObjectKey);
+        ObjectManager.instance?.DisableObject(dissolveObjectKey);
 
     }
 
