@@ -4693,9 +4693,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dissolveManageObject: {fileID: 1088210019}
-  dissolveScale: {x: 100, y: 100, z: 100}
+  dissolveScale: {x: 150, y: 150, z: 150}
   dissolveObjectKey: 
-  dissolveSpeed: 0.01
+  dissolveSpeed: 0.001
 --- !u!1001 &294602671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17268,8 +17268,12 @@ PrefabInstance:
       value: SphereCutout
       objectReference: {fileID: 0}
     - target: {fileID: 1986069906697178171, guid: dd12984957c0d434a987ed98d89059da, type: 3}
+      propertyPath: noise
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986069906697178171, guid: dd12984957c0d434a987ed98d89059da, type: 3}
       propertyPath: target1Radius
-      value: 0.5
+      value: 14.3
       objectReference: {fileID: 0}
     - target: {fileID: 1986069906697178171, guid: dd12984957c0d434a987ed98d89059da, type: 3}
       propertyPath: materials.Array.size
