@@ -29,7 +29,9 @@ public class UIManager : MonoBehaviour
     public void InvokeEvent(string key)
     {
 
+        var obj = events.Find(x => x.key == key);
 
+        obj?.uiEvent?.Invoke();
 
     }
 
