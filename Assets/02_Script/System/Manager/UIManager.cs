@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
 
     [SerializeField] private List<UIManagedClass> uiObjects = new List<UIManagedClass>();
+    [SerializeField] private List<UIEventClass> events = new List<UIEventClass>();
 
     public static UIManager instance { get; private set; }
 
