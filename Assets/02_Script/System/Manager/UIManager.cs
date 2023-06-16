@@ -26,4 +26,11 @@ public class UIManager : MonoBehaviour
 
     }
 
+    public void InvokeEvent(string key)
+    {
+
+
+
+    }
+
 }

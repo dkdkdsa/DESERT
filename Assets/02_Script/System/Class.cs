@@ -79,7 +79,7 @@ namespace Class
     public class UIEventClass
     {
 
-        public GameObject uiObject;
+        public string key;
         public UnityEvent uiEvent;
 
     }
