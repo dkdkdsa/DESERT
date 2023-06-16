@@ -64,4 +64,14 @@ namespace Class
 
     }
 
+    [System.Serializable]
+    public class CutSceneEventClass
+    {
+
+        public Vector3 targetVec;
+        public Vector3 targetRotate;
+        public float cutSceneSpeed;
+
+    }
+
 }
