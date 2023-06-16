@@ -84,4 +84,13 @@ namespace Class
 
     }
 
+    [System.Serializable]
+    public class MapEventClass
+    {
+
+        public string key;
+        public UnityEvent mapEvent;
+
+    }
+
 }
