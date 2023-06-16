@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Class
 {
@@ -71,6 +72,15 @@ namespace Class
         public Vector3 targetVec;
         public Vector3 targetRotate;
         public float cutSceneSpeed;
+
+    }
+
+    [System.Serializable]
+    public class UIEventClass
+    {
+
+        public GameObject uiObject;
+        public UnityEvent uiEvent;
 
     }
 
