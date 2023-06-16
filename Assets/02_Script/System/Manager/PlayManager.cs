@@ -26,4 +26,13 @@ public class PlayManager : MonoBehaviour
 
     }
 
+    public void InvokeEvent(string key)
+    {
+
+        var obj = mapEvents.Find(x => x.key == key);
+
+        obj?.mapEvent?.Invoke();
+
+    }
+
 }
