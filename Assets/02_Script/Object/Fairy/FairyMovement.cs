@@ -32,20 +32,7 @@ public class FairyMovement : MonoBehaviour
                 originPos.z + (Mathf.Sin(Time.time * 5) / 3));
 
         }
-        else
-        {
 
-            transform.position = Vector3.Lerp(originPos, targetPos, moveSpeed * Time.deltaTime);
-
-            if(Vector3.Distance(transform.position, targetPos) <= 0.1f)
-            {
-
-                originPos = transform.position;
-                state = FairyState.Idle;
-
-            }
-
-        }
 
     }
 
@@ -57,6 +44,29 @@ public class FairyMovement : MonoBehaviour
         moveSpeed = spd;
 
         state = FairyState.Move;
+
+        StartCoroutine(MoveCo());
+
+    }
+
+    private IEnumerator MoveCo()
+    {
+
+        float per = 0;
+
+        while (per < 1)
+        {
+
+            per += moveSpeed * Time.deltaTime;
+
+            transform.position = Vector3.Lerp(originPos, targetPos, per);
+
+            yield return null;
+
+        }
+
+        originPos = transform.position;
+        state = FairyState.Idle;
 
     }
 
