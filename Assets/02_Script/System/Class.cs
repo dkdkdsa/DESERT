@@ -93,4 +93,12 @@ namespace Class
 
     }
 
+    [System.Serializable]
+    public class FairyMoveClass
+    {
+
+
+
+    }
+
 }
