@@ -26,7 +26,7 @@ Material:
   m_Name: TempleCircle_A_Dissolve
   m_Shader: {fileID: 4800000, guid: 83590dfb53f017f4d96a8e9cdb65955c, type: 3}
   m_ValidKeywords:
-  - _AD_CUTOUT_STANDARD_SOURCE_CUSTOM_MAP
+  - _AD_CUTOUT_STANDARD_SOURCE_TWO_CUSTOM_MAPS
   - _AD_EDGE_BASE_SOURCE_CUTOUT_STANDARD
   - _AD_STATE_ENABLED
   - _DISABLE_SSR_TRANSPARENT
@@ -58,11 +58,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AdvancedDissolveCutoutStandardMap1:
-        m_Texture: {fileID: 2800000, guid: 98d5bac31001e974e9ae2ec1590bd285, type: 3}
+        m_Texture: {fileID: 2800000, guid: bc070872f5516af4eaa45d62a48b2f78, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AdvancedDissolveCutoutStandardMap2:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1ab69e9b96ad9f5409665263c3c8dc31, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AdvancedDissolveCutoutStandardMap3:
@@ -200,7 +200,7 @@ Material:
     - _AdvancedDissolveCutoutStandardMap1Intensity: 1
     - _AdvancedDissolveCutoutStandardMap1Invert: 0
     - _AdvancedDissolveCutoutStandardMap2Channel: 3
-    - _AdvancedDissolveCutoutStandardMap2Intensity: 1
+    - _AdvancedDissolveCutoutStandardMap2Intensity: 0.558
     - _AdvancedDissolveCutoutStandardMap2Invert: 0
     - _AdvancedDissolveCutoutStandardMap3Channel: 3
     - _AdvancedDissolveCutoutStandardMap3Intensity: 1
@@ -217,12 +217,12 @@ Material:
     - _AdvancedDissolveEdgeBaseColorTransparency: 1
     - _AdvancedDissolveEdgeBaseShape: 0
     - _AdvancedDissolveEdgeBaseWidthGeometric: 0.1
-    - _AdvancedDissolveEdgeBaseWidthStandard: 0.1
+    - _AdvancedDissolveEdgeBaseWidthStandard: 0.026
     - _AdvancedDissolveEdgeGIMetaPassMultiplier: 1
     - _AdvancedDissolveEdgeUVDistortionStrength: 0
     - _AdvancedDissolveKeywordCutoutGeometricCount: 0
     - _AdvancedDissolveKeywordCutoutGeometricType: 0
-    - _AdvancedDissolveKeywordCutoutStandardSource: 2
+    - _AdvancedDissolveKeywordCutoutStandardSource: 3
     - _AdvancedDissolveKeywordCutoutStandardSourceMapsMappingType: 0
     - _AdvancedDissolveKeywordEdgeAdditionalColorSource: 0
     - _AdvancedDissolveKeywordEdgeBaseSource: 1

@@ -58,7 +58,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AdvancedDissolveCutoutStandardMap1:
-        m_Texture: {fileID: 2800000, guid: 7a2e357975b318645aeba87b575c75b6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 81810837cfbbde0488134e76f55f5cff, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AdvancedDissolveCutoutStandardMap2:
