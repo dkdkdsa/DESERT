@@ -10,11 +10,13 @@ public class FairyMovement : MonoBehaviour
 
     private FairyState state;
     private Vector3 targetPos;
+    private Vector3 originPos;
 
     private void Awake()
     {
         
         targetPos = transform.position;
+        originPos = transform.position;
 
     }
 
@@ -25,11 +27,35 @@ public class FairyMovement : MonoBehaviour
         {
 
             transform.position = new Vector3(
-                targetPos.x + (Mathf.Sin(Time.time * 2) / 3),
-                targetPos.y + (Mathf.Cos(Time.time * 3) / 3),
-                targetPos.z + (Mathf.Sin(Time.time * 5) / 3));
+                originPos.x + (Mathf.Sin(Time.time * 2) / 3),
+                originPos.y + (Mathf.Cos(Time.time * 3) / 3),
+                originPos.z + (Mathf.Sin(Time.time * 5) / 3));
 
         }
+        else
+        {
+
+            transform.position = Vector3.Lerp(originPos, targetPos, moveSpeed * Time.deltaTime);
+
+            if(Vector3.Distance(transform.position, targetPos) <= 0.1f)
+            {
+
+                originPos = transform.position;
+                state = FairyState.Idle;
+
+            }
+
+        }
+
+    }
+
+    public void SetMoev(Vector3 vec)
+    {
+
+        originPos = transform.position;
+        targetPos = vec;
+
+        state = FairyState.Move;
 
     }
 
