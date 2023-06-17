@@ -24,7 +24,10 @@ public class FairyMovement : MonoBehaviour
         if(state == FairyState.Idle)
         {
 
-            
+            transform.position = new Vector3(
+                targetPos.x + (Mathf.Sin(Time.time * 2) / 3),
+                targetPos.y + (Mathf.Cos(Time.time * 3) / 3),
+                targetPos.z + (Mathf.Sin(Time.time * 5) / 3));
 
         }
 
