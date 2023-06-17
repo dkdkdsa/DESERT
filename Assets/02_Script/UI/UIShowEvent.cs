@@ -1,18 +1,26 @@
+using FD.Dev;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class UIShowEvent : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private GameObject showUI;
+    [SerializeField] private float dissolveTime;
+
+    public void ShowUI()
     {
-        
+
+        showUI.SetActive(true);
+
+        FAED.DelayInvoke(() =>
+        {
+
+            showUI.SetActive(false);
+
+        }, dissolveTime);
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
