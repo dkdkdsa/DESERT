@@ -97,6 +97,7 @@ namespace Class
     public class FairyMoveClass
     {
 
+        public string key;
         public float speed;
         public GameObject targetObj;
 
