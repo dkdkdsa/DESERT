@@ -10,7 +10,7 @@ Material:
   m_Name: blacksmith_forge
   m_Shader: {fileID: 4800000, guid: 1f3163fc7f2dbc843a57387a87aba4ca, type: 3}
   m_ValidKeywords:
-  - _AD_CUTOUT_GEOMETRIC_TYPE_PLANE
+  - _AD_CUTOUT_GEOMETRIC_TYPE_SPHERE
   - _AD_CUTOUT_STANDARD_SOURCE_CUSTOM_MAP
   - _AD_CUTOUT_STANDARD_SOURCE_MAPS_MAPPING_TYPE_TRIPLANAR
   - _AD_EDGE_BASE_SOURCE_CUTOUT_GEOMETRIC
@@ -226,7 +226,7 @@ Material:
     - _AdvancedDissolveEdgeGIMetaPassMultiplier: 1
     - _AdvancedDissolveEdgeUVDistortionStrength: 0
     - _AdvancedDissolveKeywordCutoutGeometricCount: 0
-    - _AdvancedDissolveKeywordCutoutGeometricType: 2
+    - _AdvancedDissolveKeywordCutoutGeometricType: 3
     - _AdvancedDissolveKeywordCutoutParametricCount: 0
     - _AdvancedDissolveKeywordCutoutParametricType: 6
     - _AdvancedDissolveKeywordCutoutSimpleMapsMappingType: 1

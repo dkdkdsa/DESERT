@@ -13,4 +13,12 @@ namespace Enums
 
     }
 
+    public enum FairyState
+    {
+
+        Idle,
+        Move
+
+    }
+
 }
