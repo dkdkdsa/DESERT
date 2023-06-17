@@ -49,11 +49,12 @@ public class FairyMovement : MonoBehaviour
 
     }
 
-    public void SetMoev(Vector3 vec)
+    public void SetMoev(Vector3 vec, float spd)
     {
 
         originPos = transform.position;
         targetPos = vec;
+        moveSpeed = spd;
 
         state = FairyState.Move;
 

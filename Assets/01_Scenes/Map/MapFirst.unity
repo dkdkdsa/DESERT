@@ -7561,14 +7561,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7582738141774593088, guid: 8ffdb611d5fe8a34d8a642eead32d2cf, type: 3}
-      propertyPath: m_Intensity
-      value: 3183.0986
-      objectReference: {fileID: 0}
-    - target: {fileID: 7582738141774593091, guid: 8ffdb611d5fe8a34d8a642eead32d2cf, type: 3}
-      propertyPath: m_Intensity
-      value: 14.636216
-      objectReference: {fileID: 0}
     - target: {fileID: 7582738142190403684, guid: 8ffdb611d5fe8a34d8a642eead32d2cf, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7619,24 +7611,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ffdb611d5fe8a34d8a642eead32d2cf, type: 3}
---- !u!1 &470451211 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7582738142190403687, guid: 8ffdb611d5fe8a34d8a642eead32d2cf, type: 3}
-  m_PrefabInstance: {fileID: 470451210}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &470451212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470451211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bfa48ac358529b4bb30736901813c23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
 --- !u!4 &471142828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1883436963157017875, guid: cd50baea5e7afd04bb1cc0a965677633, type: 3}
