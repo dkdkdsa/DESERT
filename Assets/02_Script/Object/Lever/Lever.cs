@@ -26,6 +26,7 @@ public class Lever : InteractionObjectRoot
         {
 
             isInteraction = true;
+            interactionEvt?.Invoke();
 
         }
 
