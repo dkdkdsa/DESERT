@@ -27,6 +27,7 @@ public class Lever : InteractionObjectRoot
 
             isInteraction = true;
             interactionEvt?.Invoke();
+            animator.SetLeverUpHash();
 
         }
 
@@ -35,7 +36,7 @@ public class Lever : InteractionObjectRoot
     public override void OnCursorOnEvent()
     {
 
-
+        //
 
     }
 }
