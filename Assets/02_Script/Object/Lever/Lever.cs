@@ -11,6 +11,7 @@ public class Lever : InteractionObjectRoot
 
     private LeverAnimator animator;
     private Transform playerTrm;
+    private PlayerValueSystem playerValueSystem;
     private bool isInteraction;
 
     private void Awake()
@@ -18,6 +19,7 @@ public class Lever : InteractionObjectRoot
         
         animator = GetComponentInChildren<LeverAnimator>();
         playerTrm = GameObject.Find("Player").transform;
+        playerValueSystem = playerTrm.GetComponent<PlayerValueSystem>();
 
     }
 
@@ -29,6 +31,7 @@ public class Lever : InteractionObjectRoot
         if (!isInteraction && key == InteractionClickKey.Left)
         {
 
+            playerValueSystem.leverSound.Play();
             isInteraction = true;
             interactionEvt?.Invoke();
             animator.SetLeverUpHash();
