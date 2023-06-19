@@ -14,6 +14,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
     private PlayerController playerController;
     private Rigidbody playerRigid;
     private SineFlootingObject flootingObject;
+    private PlayerValueSystem playerValueSystem;
     private bool isPosChanging = false;
 
     private void Awake()
@@ -23,6 +24,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
         playerController = FindObjectOfType<PlayerController>();
         playerTrm = GameObject.Find("Player").transform;
         playerRigid = playerTrm.GetComponent<Rigidbody>();
+        playerValueSystem = FindObjectOfType<PlayerValueSystem>();
 
     }
 
@@ -40,6 +42,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
         {
 
             StartCoroutine(PosChangeCo());
+            playerValueSystem.posChangeObject.Play();
 
         }
 
