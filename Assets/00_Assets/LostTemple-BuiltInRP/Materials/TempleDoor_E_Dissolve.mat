@@ -27,12 +27,12 @@ Material:
   m_Shader: {fileID: 4800000, guid: 83590dfb53f017f4d96a8e9cdb65955c, type: 3}
   m_ValidKeywords:
   - _AD_CUTOUT_GEOMETRIC_COUNT_THREE
+  - _AD_CUTOUT_GEOMETRIC_TYPE_SPHERE
   - _AD_CUTOUT_STANDARD_SOURCE_CUSTOM_MAP
   - _AD_EDGE_BASE_SOURCE_ALL
   - _AD_STATE_ENABLED
   - _DISABLE_SSR_TRANSPARENT
   m_InvalidKeywords:
-  - _AD_CUTOUT_GEOMETRIC_TYPE_NONE
   - _AD_CUTOUT_STANDARD_SOURCE_MAPS_MAPPING_TYPE_DEFAULT
   - _AD_EDGE_ADDITIONAL_COLOR_NONE
   - _AD_EDGE_UV_DISTORTION_SOURCE_DEFAULT
@@ -58,7 +58,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AdvancedDissolveCutoutStandardMap1:
-        m_Texture: {fileID: 2800000, guid: 81810837cfbbde0488134e76f55f5cff, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1ab69e9b96ad9f5409665263c3c8dc31, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AdvancedDissolveCutoutStandardMap2:
@@ -221,7 +221,7 @@ Material:
     - _AdvancedDissolveEdgeGIMetaPassMultiplier: 1
     - _AdvancedDissolveEdgeUVDistortionStrength: 0
     - _AdvancedDissolveKeywordCutoutGeometricCount: 2
-    - _AdvancedDissolveKeywordCutoutGeometricType: 0
+    - _AdvancedDissolveKeywordCutoutGeometricType: 3
     - _AdvancedDissolveKeywordCutoutStandardSource: 2
     - _AdvancedDissolveKeywordCutoutStandardSourceMapsMappingType: 0
     - _AdvancedDissolveKeywordEdgeAdditionalColorSource: 0
@@ -369,7 +369,7 @@ Material:
     - _AdvancedDissolveCutoutGeometricXYZPosition: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutStandardMap1Offset: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutStandardMap1Scroll: {r: 0, g: 0, b: 0, a: 0}
-    - _AdvancedDissolveCutoutStandardMap1Tiling: {r: 2, g: 2, b: 1, a: 0}
+    - _AdvancedDissolveCutoutStandardMap1Tiling: {r: 1, g: 1, b: 1, a: 0}
     - _AdvancedDissolveCutoutStandardMap2Offset: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutStandardMap2Scroll: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutStandardMap2Tiling: {r: 1, g: 1, b: 1, a: 0}
@@ -380,12 +380,12 @@ Material:
     - _AdvancedDissolveEdgeAdditionalColorIntensity: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveEdgeAdditionalColorMapOffset: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveEdgeAdditionalColorMapScroll: {r: 0, g: 0, b: 0, a: 0}
-    - _AdvancedDissolveEdgeAdditionalColorMapTiling: {r: 1, g: 1, b: 1, a: 0}
+    - _AdvancedDissolveEdgeAdditionalColorMapTiling: {r: 1, g: 1, b: 0, a: 0}
     - _AdvancedDissolveEdgeBaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _AdvancedDissolveEdgeBaseColorIntensity: {r: 10, g: 22025.465, b: 0, a: 0}
+    - _AdvancedDissolveEdgeBaseColorIntensity: {r: 11, g: 59873.14, b: 0, a: 0}
     - _AdvancedDissolveEdgeUVDistortionMapOffset: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveEdgeUVDistortionMapScroll: {r: 0, g: 0, b: 0, a: 0}
-    - _AdvancedDissolveEdgeUVDistortionMapTiling: {r: 1, g: 1, b: 1, a: 0}
+    - _AdvancedDissolveEdgeUVDistortionMapTiling: {r: 1, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 0.433, g: 0.41003785, b: 0.35427272, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0.43299997, g: 0.41003782, b: 0.3542727, a: 1}

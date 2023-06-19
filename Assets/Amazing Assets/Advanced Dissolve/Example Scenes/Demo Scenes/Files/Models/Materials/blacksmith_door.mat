@@ -156,15 +156,15 @@ Material:
     m_Floats:
     - _AddPrecomputedVelocity: 0
     - _AdvancedDissolveCutoutGeometric1Height: 1
-    - _AdvancedDissolveCutoutGeometric1Radius: 44.025
+    - _AdvancedDissolveCutoutGeometric1Radius: 0.5
     - _AdvancedDissolveCutoutGeometric2Height: 1
     - _AdvancedDissolveCutoutGeometric2Radius: 1
     - _AdvancedDissolveCutoutGeometric3Height: 1
     - _AdvancedDissolveCutoutGeometric3Radius: 1
     - _AdvancedDissolveCutoutGeometric4Height: 1
     - _AdvancedDissolveCutoutGeometric4Radius: 1
-    - _AdvancedDissolveCutoutGeometricInvert: 0
-    - _AdvancedDissolveCutoutGeometricNoise: 2
+    - _AdvancedDissolveCutoutGeometricInvert: 1
+    - _AdvancedDissolveCutoutGeometricNoise: 0.1
     - _AdvancedDissolveCutoutGeometricXYZAxis: 0
     - _AdvancedDissolveCutoutGeometricXYZRollout: 0
     - _AdvancedDissolveCutoutGeometricXYZSpace: 0
@@ -219,7 +219,7 @@ Material:
     - _AdvancedDissolveEdgeAdditionalColorTransparency: 1
     - _AdvancedDissolveEdgeBaseColorTransparency: 1
     - _AdvancedDissolveEdgeBaseShape: 0
-    - _AdvancedDissolveEdgeBaseWidthGeometric: 0.3
+    - _AdvancedDissolveEdgeBaseWidthGeometric: 0.1
     - _AdvancedDissolveEdgeBaseWidthParametric: 0.1
     - _AdvancedDissolveEdgeBaseWidthSimple: 0.1
     - _AdvancedDissolveEdgeBaseWidthStandard: 0.1
@@ -348,7 +348,7 @@ Material:
     m_Colors:
     - _AdvancedDissolveBakedKeywords: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric1Normal: {r: 1, g: 0, b: 0, a: 0}
-    - _AdvancedDissolveCutoutGeometric1Position: {r: 32.4, g: 6.1899996, b: 113.5, a: 0}
+    - _AdvancedDissolveCutoutGeometric1Position: {r: 162.74, g: 2, b: -73.56, a: 0}
     - _AdvancedDissolveCutoutGeometric2Normal: {r: 1, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric2Position: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric3Normal: {r: 1, g: 0, b: 0, a: 0}

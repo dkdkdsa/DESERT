@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 262.3369, g: 325.0498, b: 430.21924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19317,6 +19317,14 @@ PrefabInstance:
       value: 84.520004
       objectReference: {fileID: 0}
     - target: {fileID: 1986069906704642185, guid: dd12984957c0d434a987ed98d89059da, type: 3}
+      propertyPath: cutoutGeometricType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986069906704642185, guid: dd12984957c0d434a987ed98d89059da, type: 3}
+      propertyPath: cutoutGeometricCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986069906704642185, guid: dd12984957c0d434a987ed98d89059da, type: 3}
       propertyPath: materials.Array.size
       value: 23
       objectReference: {fileID: 0}
@@ -25901,7 +25909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7907702167890040944, guid: 2f816024c7b62a1429b9038d3e286e5c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 71.77
+      value: 71.73273
       objectReference: {fileID: 0}
     - target: {fileID: 7907702167890040944, guid: 2f816024c7b62a1429b9038d3e286e5c, type: 3}
       propertyPath: m_LocalRotation.w
