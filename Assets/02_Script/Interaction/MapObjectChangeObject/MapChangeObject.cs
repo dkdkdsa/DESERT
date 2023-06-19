@@ -8,6 +8,7 @@ public class MapChangeObject : InteractionObjectRoot
 {
 
     [SerializeField] private CircleDissolveEvent dissolveEvent;
+    
 
     private bool isChageCoolDown = false;
 
@@ -34,7 +35,7 @@ public class MapChangeObject : InteractionObjectRoot
     public override void OnCursorOnEvent()
     {
 
-        //UI추가 예정
+        UIManager.instance.GetUIObject<TextSetting>("SettingText").SetText("우클릭으로 석상 작동");
 
     }
 

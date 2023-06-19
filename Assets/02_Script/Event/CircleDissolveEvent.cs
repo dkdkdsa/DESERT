@@ -10,6 +10,7 @@ public class CircleDissolveEvent : EventRoot
     [SerializeField] private Vector3 dissolveScale;
     [SerializeField] private string dissolveObjectKey;
     [SerializeField] private float dissolveSpeed;
+    [SerializeField] private bool isRve;
 
     private bool isOn = false;
 
@@ -42,7 +43,19 @@ public class CircleDissolveEvent : EventRoot
 
         float per = 0;
 
-        ObjectManager.instance?.EnableObject(dissolveObjectKey);
+        if (isRve)
+        {
+
+            ObjectManager.instance?.DisableObject(dissolveObjectKey);
+
+        }
+        else
+        {
+
+            ObjectManager.instance?.EnableObject(dissolveObjectKey);
+        }
+
+        
         
         while (per < 1) 
         { 
@@ -78,7 +91,17 @@ public class CircleDissolveEvent : EventRoot
 
         }
 
-        ObjectManager.instance?.DisableObject(dissolveObjectKey);
+        if (isRve)
+        {
+
+            ObjectManager.instance?.EnableObject(dissolveObjectKey);
+
+        }
+        else
+        {
+            ObjectManager.instance?.DisableObject(dissolveObjectKey);
+
+        }
 
     }
 

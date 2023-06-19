@@ -7,6 +7,7 @@ public class Portal : MonoBehaviour
 {
 
     [SerializeField] private string nextScene;
+    [SerializeField] private FadeEvent fadeEvent;
 
     private bool isInteraction;
 
@@ -18,9 +19,16 @@ public class Portal : MonoBehaviour
 
             isInteraction = true;
 
-            SceneManager.LoadScene(nextScene);
+            fadeEvent.FadeIn();
 
         }
+
+    }
+
+    public void ChangeScene()
+    {
+
+        SceneManager.LoadScene(nextScene);
 
     }
 

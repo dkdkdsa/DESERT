@@ -36,7 +36,7 @@ public class Lever : InteractionObjectRoot
     public override void OnCursorOnEvent()
     {
 
-        //
+        UIManager.instance.GetUIObject<TextSetting>("SettingText").SetText("우클릭으로 레버 작동");
 
     }
 }
