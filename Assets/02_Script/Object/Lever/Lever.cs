@@ -10,17 +10,21 @@ public class Lever : InteractionObjectRoot
     [SerializeField] private UnityEvent interactionEvt;
 
     private LeverAnimator animator;
+    private Transform playerTrm;
     private bool isInteraction;
 
     private void Awake()
     {
         
         animator = GetComponentInChildren<LeverAnimator>();
+        playerTrm = GameObject.Find("Player").transform;
 
     }
 
     public override void OnCursorClickEvent(InteractionClickKey key)
     {
+
+        if (Vector3.Distance(transform.position, playerTrm.position) > 5) return;
 
         if (!isInteraction && key == InteractionClickKey.Left)
         {
@@ -36,7 +40,9 @@ public class Lever : InteractionObjectRoot
     public override void OnCursorOnEvent()
     {
 
-        UIManager.instance.GetUIObject<TextSetting>("SettingText").SetText("우클릭으로 레버 작동");
+        if (Vector3.Distance(transform.position, playerTrm.position) > 5) return;
+
+        UIManager.instance.GetUIObject<TextSetting>("SettingText").SetText("좌클릭으로 레버 작동");
 
     }
 }

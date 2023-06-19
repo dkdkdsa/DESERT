@@ -53,7 +53,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
 
         if (Vector3.Distance(transform.position, playerTrm.position) > sencingRange) return;
 
-        UIManager.instance.GetUIObject<TextSetting>("SettingText").SetText("우클릭으로 위치전환");
+        UIManager.instance.GetUIObject<TextSetting>("SettingText").SetText("좌클릭으로 위치전환");
 
     }
 
