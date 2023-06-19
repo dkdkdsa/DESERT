@@ -20,12 +20,12 @@ public class ObjectManager : MonoBehaviour
     public void EnableObject(string key)
     {
 
-        var obj = manageClasses.Find(x => x.key == key);
+        var obj = manageClasses?.Find(x => x.key == key);
 
         foreach (var item in obj.managedObjects)
         {
 
-            item.EnableObject();
+            item?.EnableObject();
 
         }
             

@@ -17,7 +17,12 @@ public class UIShowEvent : MonoBehaviour
         FAED.DelayInvoke(() =>
         {
 
-            showUI.SetActive(false);
+            if(showUI != null)
+            {
+
+                showUI.SetActive(false);
+
+            }
 
         }, dissolveTime);
 
