@@ -11,5 +11,6 @@ public class PlayerValueSystem : MonoBehaviour
     [field: SerializeField] public float jumpPower { get; private set; }
     [field: SerializeField] public LayerMask interactionMask { get; private set; }
     [field: SerializeField] public AudioSource posChangeObject { get; private set; }
+    [field: SerializeField] public AudioSource mapChangeSound { get; private set; }
 
 }

@@ -11,13 +11,26 @@ public class MapChangeObject : InteractionObjectRoot
     
 
     private bool isChageCoolDown = false;
+    private PlayerValueSystem valueSystem;
+    private Transform playerTrm;
+
+    private void Awake()
+    {
+        
+        valueSystem = FindObjectOfType<PlayerValueSystem>();
+        playerTrm = GameObject.Find("Player").transform;
+
+    }
 
     public override void OnCursorClickEvent(InteractionClickKey key)
     {
 
+        if (Vector3.Distance(transform.position, playerTrm.position) > 5) return;
+
         if(key == InteractionClickKey.Left && !isChageCoolDown)
         {
 
+            valueSystem.mapChangeSound.Play();
             isChageCoolDown = true;
             dissolveEvent.StartEvent();
 
@@ -34,8 +47,8 @@ public class MapChangeObject : InteractionObjectRoot
 
     public override void OnCursorOnEvent()
     {
-
-        UIManager.instance.GetUIObject<TextSetting>("SettingText").SetText("우클릭으로 석상 작동");
+        if (Vector3.Distance(transform.position, playerTrm.position) > 5) return;
+        UIManager.instance.GetUIObject<TextSetting>("SettingText").SetText("좌클릭으로 석상 작동");
 
     }
 
