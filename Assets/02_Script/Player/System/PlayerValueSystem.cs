@@ -12,5 +12,6 @@ public class PlayerValueSystem : MonoBehaviour
     [field: SerializeField] public LayerMask interactionMask { get; private set; }
     [field: SerializeField] public AudioSource posChangeObject { get; private set; }
     [field: SerializeField] public AudioSource mapChangeSound { get; private set; }
+    [field: SerializeField] public AudioSource leverSound { get; private set; }
 
 }
