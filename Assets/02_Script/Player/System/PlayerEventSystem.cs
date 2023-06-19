@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerEventSystem : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PlayerEventSystem : MonoBehaviour
         JumpEventExecute();
         InteractionEventExecute();
         OnUpdateEvent?.Invoke();
+        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Intro");
 
     }
 
