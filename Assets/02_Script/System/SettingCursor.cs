@@ -26,4 +26,21 @@ public class SettingCursor : MonoBehaviour
 
     }
 
+    public void SetVis()
+    {
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+
+    }
+
+    public void SetDis()
+    {
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+    }
+
 }
