@@ -18,7 +18,7 @@ public class CircleDissolveEvent : EventRoot
     {
 
         isOn = !isOn;
-        CameraManager.instance.CameraShake(10f, 10f, 0.1f);
+        CameraManager.instance?.CameraShake(10f, 10f, 0.1f);
 
         if (isOn)
         {
