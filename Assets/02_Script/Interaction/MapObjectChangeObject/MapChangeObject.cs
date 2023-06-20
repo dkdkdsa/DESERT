@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FD.Dev;
+using UnityEngine.Events;
 
 public class MapChangeObject : InteractionObjectRoot
 {
 
     [SerializeField] private CircleDissolveEvent dissolveEvent;
+    [SerializeField] private UnityEvent evt;
     
 
     private bool isChageCoolDown = false;
@@ -33,6 +35,7 @@ public class MapChangeObject : InteractionObjectRoot
             valueSystem.mapChangeSound.Play();
             isChageCoolDown = true;
             dissolveEvent.StartEvent();
+            evt?.Invoke();
 
             FAED.DelayInvoke(() =>
             {

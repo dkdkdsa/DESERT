@@ -62,6 +62,7 @@ namespace Class
 
         public string key;
         public List<DissolveObject> managedObjects = new List<DissolveObject>();
+        public bool isRev;
 
     }
 

@@ -29,7 +29,7 @@ public class PlayerInteraction : PlayerBehaviorRoot
 
             if (hit.transform.TryGetComponent<InteractionObjectRoot>(out var copo))
             {
-
+                if (copo.enabled == false) return;
                 copo.OnCursorOnEvent();
 
             }
@@ -49,6 +49,7 @@ public class PlayerInteraction : PlayerBehaviorRoot
             if (hit.transform.TryGetComponent<InteractionObjectRoot>(out var copo))
             {
 
+                if (copo.enabled == false) return;
                 copo.OnCursorClickEvent(key);
 
             }
