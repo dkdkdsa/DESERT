@@ -27,9 +27,13 @@ public class DissolveOnEvent : EventRoot
 
             foreach(var item in dissolveRenderers) 
             {
+                foreach (var mat in item.materials)
+                {
 
-                item.material.SetFloat("_AdvancedDissolveCutoutStandardClip", per);
-            
+                    mat.SetFloat("_AdvancedDissolveCutoutStandardClip", per);
+
+                }
+
             }
 
             yield return null;
