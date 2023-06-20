@@ -53,6 +53,7 @@ public class CircleDissolveEvent : EventRoot
         {
 
             ObjectManager.instance?.EnableObject(dissolveObjectKey);
+
         }
 
         
