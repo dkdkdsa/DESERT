@@ -22,6 +22,9 @@ public class ObjectManager : MonoBehaviour
 
         var obj = manageClasses?.Find(x => x.key == key);
 
+        if (obj == null) return;
+        if (obj.managedObjects == null) return;
+
         foreach (var item in obj?.managedObjects)
         {
 
@@ -34,7 +37,10 @@ public class ObjectManager : MonoBehaviour
     public void DisableObject(string key)
     {
 
-        var obj = manageClasses.Find(x => x.key == key);
+        var obj = manageClasses?.Find(x => x.key == key);
+
+        if (obj == null) return;
+        if (obj.managedObjects == null) return;
 
         foreach (var item in obj.managedObjects)
         {
