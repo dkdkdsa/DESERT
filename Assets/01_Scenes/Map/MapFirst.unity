@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1093.6334, g: 944.12646, b: 871.11816, a: 1}
+  m_IndirectSpecularColor: {r: 1093.08, g: 944.7461, b: 873.0803, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -30721,7 +30721,7 @@ Transform:
   m_GameObject: {fileID: 1231325879}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 53.4, y: 8.19, z: 56.5}
-  m_LocalScale: {x: 114.3, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1972799410}
@@ -35856,6 +35856,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1487066650}
+        m_TargetAssemblyTypeName: MapTitleUI, Assembly-CSharp
+        m_MethodName: ShowTitleUI
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "\uC774\uB984\uC5C6\uB294 \uB9C8\uC744 \uC911\uC559\uBD80"
           m_BoolArgument: 0
         m_CallState: 2
   sencingAbleTag:
@@ -51545,7 +51557,7 @@ MonoBehaviour:
   target1EndPointTransform: {fileID: 0}
   target1StartPointPosition: {x: 32.4, y: 6.1899996, z: 113.5}
   target1EndPointPosition: {x: 0, y: 0, z: 0}
-  target1Radius: 57.15
+  target1Radius: 0.5
   target1Normal: {x: 0, y: 1, z: 0}
   target1Rotation: {x: 0, y: 0, z: 0}
   target1Size: {x: 1, y: 1, z: 1}
