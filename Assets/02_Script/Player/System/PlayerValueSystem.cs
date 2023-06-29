@@ -15,5 +15,6 @@ public class PlayerValueSystem : MonoBehaviour
     [field: SerializeField] public AudioSource leverSound { get; private set; }
 
     public bool darkMode { get; set; }
+    public float darkGauge { get; set; }
 
 }
