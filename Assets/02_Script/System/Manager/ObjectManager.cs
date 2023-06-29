@@ -2,13 +2,16 @@ using Class;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class ObjectManager : MonoBehaviour
 {
 
     [SerializeField] private List<ObjectManageClass> manageClasses = new List<ObjectManageClass>();
+    [SerializeField] private Volume darkModeVolume;
 
     public static ObjectManager instance;
+    public Volume darkVolume => darkModeVolume;
 
     private void Awake()
     {
