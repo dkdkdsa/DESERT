@@ -20,11 +20,17 @@ public class DarkZone : MonoBehaviour
 
         if (isFading) return;
 
-        if (collision.transform.CompareTag("Player"))
+        if (collision.transform.CompareTag("Player") && !valueSystem.darkMode)
         {
 
             isFading = true;
             StartCoroutine(VolumeFadeCo());
+
+        }
+        else if (valueSystem.darkMode)
+        {
+
+            ObjectManager.instance.darkVolume.weight = 1;
 
         }
 
