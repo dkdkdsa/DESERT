@@ -1614,6 +1614,7 @@ GameObject:
   - component: {fileID: 1812980145}
   - component: {fileID: 1812980146}
   - component: {fileID: 1812980147}
+  - component: {fileID: 1812980148}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1822,6 +1823,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2627922051f5209449386fa6b510c3cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1812980148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812980134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75b471a731b7d244a75a7ff6be83b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2004984869
@@ -16662,7 +16675,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: -1.4864104e-27, z: 9.12e-43, w: -1.2456501e-38}
+  m_BoundingSphereOverride: {x: 1.7748036e+28, y: 4.435881e+27, z: 7.1439585e+31, w: 4.485902e+21}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

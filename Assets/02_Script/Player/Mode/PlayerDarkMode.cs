@@ -11,7 +11,7 @@ public class PlayerDarkMode : PlayerBehaviorRoot
         if (!valueSystem.darkMode) return;
 
         var horVec = Input.GetAxisRaw("Horizontal");
-        var vetVec = Input.GetAxisRaw("Vertiacl");
+        var vetVec = Input.GetAxisRaw("Vertical");
 
         float rootVec = Mathf.Abs(horVec) + Mathf.Abs(vetVec);
 
