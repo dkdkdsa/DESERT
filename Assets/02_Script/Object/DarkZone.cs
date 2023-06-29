@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DarkZone : MonoBehaviour
 {
 
     private PlayerValueSystem valueSystem;
+    private Slider slider;
     private bool isFading;
 
     private void Awake()
@@ -15,12 +17,21 @@ public class DarkZone : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+
+        slider = UIManager.instance.GetUIObject<Slider>("DarkGauge");
+
+    }
+
     private void OnTriggerEnter(Collider collision)
     {
 
         if (isFading) return;
 
         valueSystem.isCharging = true;
+
+        slider.value = 1;
 
         if (collision.transform.CompareTag("Player") && !valueSystem.darkMode)
         {
