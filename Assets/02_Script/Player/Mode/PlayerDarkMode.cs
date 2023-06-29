@@ -27,6 +27,8 @@ public class PlayerDarkMode : PlayerBehaviorRoot
 
         rootVec = Mathf.Clamp(rootVec, 0, 1);
 
+        slider.value = valueSystem.darkGauge;
+
         if(rootVec > 0)
         {
 
