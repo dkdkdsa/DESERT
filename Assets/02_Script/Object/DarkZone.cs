@@ -20,6 +20,8 @@ public class DarkZone : MonoBehaviour
 
         if (isFading) return;
 
+        valueSystem.isCharging = true;
+
         if (collision.transform.CompareTag("Player") && !valueSystem.darkMode)
         {
 
@@ -35,6 +37,13 @@ public class DarkZone : MonoBehaviour
             valueSystem.darkGauge = 1;
 
         }
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+
+        valueSystem.isCharging = false;
 
     }
 

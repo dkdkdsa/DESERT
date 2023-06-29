@@ -1,14 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerDarkMode : PlayerBehaviorRoot
 {
 
+    private Slider slider;
+
+    private void Start()
+    {
+
+        slider = UIManager.instance.GetUIObject<Slider>("DarkGauge");
+
+    }
+
     private void DrakGaugeDissolve()
     {
 
-        if (!valueSystem.darkMode) return;
+        if (!valueSystem.darkMode || valueSystem.isCharging) return;
 
         var horVec = Input.GetAxisRaw("Horizontal");
         var vetVec = Input.GetAxisRaw("Vertical");
