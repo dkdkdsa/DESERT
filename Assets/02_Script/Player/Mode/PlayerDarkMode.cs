@@ -23,6 +23,31 @@ public class PlayerDarkMode : PlayerBehaviorRoot
             valueSystem.darkGauge -= Time.deltaTime * 0.01f;
 
         }
+        else
+        {
+
+            valueSystem.darkMode = false;
+            StartCoroutine(DarkDissolveCo());
+
+        }
+
+    }
+
+    private IEnumerator DarkDissolveCo()
+    {
+
+        float per = 1;
+
+        while (per > 0)
+        {
+
+            per -= Time.deltaTime;
+            ObjectManager.instance.darkVolume.weight = per;
+            yield return null;
+
+            if (valueSystem.darkMode) break;
+
+        }
 
     }
 
