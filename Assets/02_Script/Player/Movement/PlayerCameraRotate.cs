@@ -17,6 +17,9 @@ public class PlayerCameraRotate : PlayerBehaviorRoot
         
         cvcam = FindObjectOfType<CinemachineVirtualCamera>();
 
+        xValue = cvcam.transform.eulerAngles.y;
+        yValue = cvcam.transform.eulerAngles.x;
+
     }
 
     private void CameraRotate()
