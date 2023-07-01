@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class CutSceneManager : MonoBehaviour
 {
-    
 
+    [SerializeField] private CutSceneRoot firstCutScene;
+
+    private IEnumerator Start()
+    {
+        
+        yield return null;
+        firstCutScene.StartCutScene();
+
+    }
 
 }
