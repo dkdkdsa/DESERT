@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public abstract class CutSceneRoot : MonoBehaviour
 {
 
-    [SerializeField] private UnityEvent cutSceneEndEvent;
+    [SerializeField] protected UnityEvent cutSceneEndEvent;
 
     public abstract void StartCutScene();
 
