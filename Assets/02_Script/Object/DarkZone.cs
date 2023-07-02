@@ -20,7 +20,7 @@ public class DarkZone : MonoBehaviour
     private void Start()
     {
 
-        slider = UIManager.instance.GetUIObject<Slider>("DarkGauge");
+        slider = UIManager.instance?.GetUIObject<Slider>("DarkGauge");
 
     }
 
