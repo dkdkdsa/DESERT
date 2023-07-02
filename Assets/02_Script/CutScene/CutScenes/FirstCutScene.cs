@@ -17,8 +17,7 @@ public class FirstCutScene : CutSceneRoot
     private IEnumerator CutSceneCo()
     {
 
-        //yield return null;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
 
         float per = 0;
 
@@ -33,6 +32,8 @@ public class FirstCutScene : CutSceneRoot
             yield return null;
 
         }
+
+        camObject.transform.localPosition = new Vector3(0, 1, 0);
 
     }
 
