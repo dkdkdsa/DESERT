@@ -19,7 +19,7 @@ public class FirstCutScene : CutSceneRoot
     private IEnumerator CutSceneCo()
     {
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2.5f);
 
         float per = 0;
 
@@ -38,6 +38,8 @@ public class FirstCutScene : CutSceneRoot
 
         camObject.transform.localPosition = new Vector3(0, 1, 0);
         fadeVolume.gameObject.SetActive(false);
+
+        CameraManager.instance.SetShake(0, 0);
 
     }
 

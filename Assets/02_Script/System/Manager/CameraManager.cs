@@ -40,4 +40,12 @@ public class CameraManager : MonoBehaviour
 
     }
 
+    public void SetShake(float amplitudeGain, float frequencyGain)
+    {
+
+        cbmcp.m_AmplitudeGain = amplitudeGain;
+        cbmcp.m_FrequencyGain = frequencyGain;
+
+    }
+
 }
