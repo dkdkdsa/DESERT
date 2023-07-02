@@ -14,8 +14,6 @@ public class Lamp : MonoBehaviour
         lampLight = GetComponentInChildren<Light>();
         lampRender = GetComponent<Renderer>();
 
-        Debug.Log(lampLight.intensity);
-
     }
 
     public void Show()
@@ -42,7 +40,7 @@ public class Lamp : MonoBehaviour
 
         }
 
-        lampLight.intensity = 20;
+        lampLight.intensity = 131072;
         lampRender.materials[1].SetFloat("_EmissiveExposureWeight", 0);
 
     }
