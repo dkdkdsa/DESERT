@@ -9493,7 +9493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 21.49
+  m_Intensity: 20
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -9615,7 +9615,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 368166.75
+  m_Intensity: 131072
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -23826,19 +23826,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3871699712643640964, guid: d79f9ac451026124b89129193bb4250c, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: -2.8159672e-29
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3871699712643640964, guid: d79f9ac451026124b89129193bb4250c, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0
+      value: 4.49994e-39
       objectReference: {fileID: 0}
     - target: {fileID: 3871699712643640964, guid: d79f9ac451026124b89129193bb4250c, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 0
+      value: 9.1835e-41
       objectReference: {fileID: 0}
     - target: {fileID: 3871699712643640964, guid: d79f9ac451026124b89129193bb4250c, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 0
+      value: 1.8e-43
       objectReference: {fileID: 0}
     - target: {fileID: 4022963112875829214, guid: d79f9ac451026124b89129193bb4250c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -33788,6 +33788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_Shard_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 058f427a1a74dba409b31c53918712d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 058f427a1a74dba409b31c53918712d4, type: 3}
 --- !u!1001 &1325821065
@@ -37220,6 +37224,10 @@ PrefabInstance:
     - target: {fileID: 3868794663773838430, guid: 92c2fb85590f45d43b69c7ab5bd21e5c, type: 3}
       propertyPath: m_Name
       value: Prop_Lantern_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3868794663773838430, guid: 92c2fb85590f45d43b69c7ab5bd21e5c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4538336030639179492, guid: 92c2fb85590f45d43b69c7ab5bd21e5c, type: 3}
       propertyPath: m_RootOrder
