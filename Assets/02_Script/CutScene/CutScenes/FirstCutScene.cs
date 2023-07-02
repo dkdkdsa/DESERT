@@ -41,7 +41,7 @@ public class FirstCutScene : CutSceneRoot
 
         CameraManager.instance.SetShake(0, 0);
 
-        c
+        cutSceneEndEvent?.Invoke();
 
     }
 
