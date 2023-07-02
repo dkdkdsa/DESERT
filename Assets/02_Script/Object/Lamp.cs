@@ -11,15 +11,17 @@ public class Lamp : MonoBehaviour
     private void Awake()
     {
         
-        lampLight = transform.GetComponentInChildren<Light>();
+        lampLight = GetComponentInChildren<Light>();
         lampRender = GetComponent<Renderer>();
+
+        Debug.Log(lampLight.intensity);
 
     }
 
     public void Show()
     {
 
-
+        StartCoroutine(ShowEventCo());
 
     }
 
@@ -36,6 +38,8 @@ public class Lamp : MonoBehaviour
             lampRender.materials[1].SetFloat("_EmissiveExposureWeight", 1 - per);
 
             lampLight.intensity = Mathf.Lerp(0, 20, per);
+
+            //Debug.Log(lampLight.intensity);
 
             yield return null;
 
