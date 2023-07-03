@@ -5,7 +5,7 @@ using UnityEngine;
 public class LineDrawSc : MonoBehaviour
 {
 
-    [HideInInspector] public Vector3[] renderArr;
+    [HideInInspector] public Vector3[] renderArr = null;
 
     public void SetArr(Vector3[] renderArr)
     {
@@ -19,7 +19,7 @@ public class LineDrawSc : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         
-
+        if(renderArr == null) return;
 
     }
 
