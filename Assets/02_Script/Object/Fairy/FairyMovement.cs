@@ -49,13 +49,28 @@ public class FairyMovement : MonoBehaviour
         for (int i = 0; i < arr.Length; i++)
         {
 
-            transform.position = arr[i];
-            yield return new WaitForSeconds(spd / arr.Length);
+            float per = 0;
+
+            Vector3 resPos = transform.position;
+
+            while(per < 1)
+            {
+
+                per += Time.deltaTime * spd;
+
+                transform.position = Vector3.Lerp(resPos, arr[i], per);
+
+                yield return null;
+
+            }
+
+            yield return null;
 
         }
 
         originPos = transform.position;
         state = FairyState.Idle;
+
 
     }
 
