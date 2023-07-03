@@ -104,4 +104,14 @@ namespace Class
 
     }
 
+    [System.Serializable]
+    public class FairyLineMoveClass
+    {
+
+        public string key;
+        public float speed;
+        public FairyLine line;
+
+    }
+
 }
