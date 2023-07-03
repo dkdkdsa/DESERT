@@ -111,6 +111,7 @@ namespace Class
         public string key;
         public float speed;
         public FairyLine line;
+        public UnityEvent endEvent;
 
     }
 

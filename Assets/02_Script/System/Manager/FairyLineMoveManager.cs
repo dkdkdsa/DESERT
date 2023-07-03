@@ -20,7 +20,23 @@ public class FairyLineMoveManager : MonoBehaviour
     private void Start()
     {
 
-        fairyMovement.SetMove(fairyMoveClass[0].line.GetLine(), fairyMoveClass[0].speed);
+        fairyMovement.SetMove(fairyMoveClass[0].line.GetLine(), fairyMoveClass[0].speed, fairyMoveClass[0].endEvent);
+
+    }
+
+    public void GetMoveEvt(int idx)
+    {
+
+        fairyMovement.SetMove(fairyMoveClass[idx].line.GetLine(), fairyMoveClass[idx].speed, fairyMoveClass[idx].endEvent);
+
+    }
+
+    public void GetMoveEvt(string key)
+    {
+
+        var obj = fairyMoveClass.Find(x => x.key == key);
+
+        fairyMovement.SetMove(obj.line.GetLine(), obj.speed, obj.endEvent);
 
     }
 

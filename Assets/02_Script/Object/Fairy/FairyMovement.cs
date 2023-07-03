@@ -2,6 +2,7 @@ using Enums;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FairyMovement : MonoBehaviour
 {
@@ -32,17 +33,17 @@ public class FairyMovement : MonoBehaviour
 
     }
 
-    public void SetMove(Vector3[] arr, float spd)
+    public void SetMove(Vector3[] arr, float spd, UnityEvent endEvent)
     {
 
 
         state = FairyState.Move;
 
-        StartCoroutine(MoveCo(arr, spd));
+        StartCoroutine(MoveCo(arr, spd, endEvent));
 
     }
 
-    private IEnumerator MoveCo(Vector3[] arr, float spd)
+    private IEnumerator MoveCo(Vector3[] arr, float spd, UnityEvent endEvent)
     {
 
 
@@ -70,6 +71,7 @@ public class FairyMovement : MonoBehaviour
 
         originPos = transform.position;
         state = FairyState.Idle;
+        endEvent?.Invoke();
 
 
     }
