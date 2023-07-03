@@ -11,6 +11,8 @@ public class FairyLine : MonoBehaviour
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private int count;
 
+    public Vector3[] GetLine() => arr;
+
     public void SettingArray()
     {
 
@@ -19,6 +21,7 @@ public class FairyLine : MonoBehaviour
         lineRenderer.SetPositions(arr);
 
     }
+
 
     private void Awake()
     {
@@ -37,12 +40,12 @@ public class FairyLine : MonoBehaviour
         var old = Gizmos.color;
 
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(start.position, 0.5f);
-        Gizmos.DrawWireSphere(end.position, 0.5f);
+        Gizmos.DrawWireSphere(start.position, 0.3f);
+        Gizmos.DrawWireSphere(end.position, 0.3f);
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(startControll.position, 0.5f);
-        Gizmos.DrawWireSphere(endControll.position, 0.5f);
+        Gizmos.DrawWireSphere(startControll.position, 0.3f);
+        Gizmos.DrawWireSphere(endControll.position, 0.3f);
 
         Gizmos.color = old;
     }
