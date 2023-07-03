@@ -22,8 +22,6 @@ public class FairyMoveManager : MonoBehaviour
 
         var obj = moves.Find(x => x.key == key);
 
-        //fairy.SetMove(obj.targetObj.transform.position, obj.speed);
-
     }
 
 }
