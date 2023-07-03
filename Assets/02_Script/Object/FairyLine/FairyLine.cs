@@ -6,7 +6,7 @@ using UnityEngine;
 public class FairyLine : MonoBehaviour
 {
 
-    [SerializeField] private Vector3 start, startControll, end, endControll;
+    [SerializeField] private Transform start, startControll, end, endControll;
     [SerializeField] private Vector3[] arr;
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private int count;
@@ -15,9 +15,38 @@ public class FairyLine : MonoBehaviour
     {
 
         lineRenderer.positionCount = count;
-        arr = DOCurve.CubicBezier.GetSegmentPointCloud(start, startControll, end, endControll, count);
+        arr = DOCurve.CubicBezier.GetSegmentPointCloud(start.position, startControll.position, end.position, endControll.position, count);
         lineRenderer.SetPositions(arr);
 
     }
+
+    private void Awake()
+    {
+
+        lineRenderer.enabled = false;
+
+    }
+
+#if UNITY_EDITOR
+
+    private void OnDrawGizmos()
+    {
+        
+        if(start == null || end == null || startControll == null || endControll == null) return;
+
+        var old = Gizmos.color;
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(start.position, 0.5f);
+        Gizmos.DrawWireSphere(end.position, 0.5f);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(startControll.position, 0.5f);
+        Gizmos.DrawWireSphere(endControll.position, 0.5f);
+
+        Gizmos.color = old;
+    }
+
+#endif
 
 }
