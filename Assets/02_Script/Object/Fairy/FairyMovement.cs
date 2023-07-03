@@ -6,16 +6,12 @@ using UnityEngine;
 public class FairyMovement : MonoBehaviour
 {
 
-    [SerializeField] private float moveSpeed;
-
     private FairyState state;
-    private Vector3 targetPos;
     private Vector3 originPos;
 
     private void Awake()
     {
         
-        targetPos = transform.position;
         originPos = transform.position;
 
     }
@@ -36,32 +32,25 @@ public class FairyMovement : MonoBehaviour
 
     }
 
-    public void SetMove(Vector3 vec, float spd)
+    public void SetMove(Vector3[] arr, float spd)
     {
 
-        originPos = transform.position;
-        targetPos = vec;
-        moveSpeed = spd;
 
         state = FairyState.Move;
 
-        StartCoroutine(MoveCo());
+        StartCoroutine(MoveCo(arr, spd));
 
     }
 
-    private IEnumerator MoveCo()
+    private IEnumerator MoveCo(Vector3[] arr, float spd)
     {
 
-        float per = 0;
 
-        while (per < 1)
+        for (int i = 0; i < arr.Length; i++)
         {
 
-            per += moveSpeed * Time.deltaTime;
-
-            transform.position = Vector3.Lerp(originPos, targetPos, per);
-
-            yield return null;
+            transform.position = arr[i];
+            yield return new WaitForSeconds(spd / arr.Length);
 
         }
 
