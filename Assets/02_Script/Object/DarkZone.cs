@@ -27,7 +27,7 @@ public class DarkZone : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
 
-        if (isFading) return;
+        if (isFading || collision.CompareTag("Player") == false) return;
 
         valueSystem.isCharging = true;
 
