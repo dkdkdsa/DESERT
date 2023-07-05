@@ -25,7 +25,7 @@ public class DissolveObject : MonoBehaviour
         foreach (var interactionObject in interactionObjects)
         {
 
-            interactionObject.enabled = true;
+            interactionObject.enabled = true;   
 
         }
 
