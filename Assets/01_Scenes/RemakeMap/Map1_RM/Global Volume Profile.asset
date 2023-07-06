@@ -18,7 +18,7 @@ MonoBehaviour:
     m_Value: 1
   cloudType:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   skyAmbientMode:
     m_OverrideState: 0
     m_Value: 1
@@ -117,8 +117,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: {x: 1, y: 1, z: 1, w: 0.56950647}
   gain:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: -0.505618}
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: -0.15280871}
 --- !u!114 &2418248195029961210
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -174,10 +174,10 @@ MonoBehaviour:
     m_Value: 1
   upperHemisphereLuxValue:
     m_OverrideState: 1
-    m_Value: 0.49881694
+    m_Value: 1.0785757
   upperHemisphereLuxColor:
     m_OverrideState: 1
-    m_Value: {x: 0.0280404, y: 0.1464775, z: 0.5}
+    m_Value: {x: 0.23264816, y: 0.2543421, z: 0.5}
   desiredLuxValue:
     m_OverrideState: 0
     m_Value: 20000
@@ -192,7 +192,7 @@ MonoBehaviour:
     m_Value: 0
   hdriSky:
     m_OverrideState: 1
-    m_Value: {fileID: 8900000, guid: 8d0a81816d226754cb40e46a09ebadbb, type: 3}
+    m_Value: {fileID: 8900000, guid: 948bd25ef0fd9da4abce5cc2cf4e1728, type: 3}
   distortionMode:
     m_OverrideState: 1
     m_Value: 0
@@ -391,13 +391,13 @@ MonoBehaviour:
     m_Value: 1000
   baseHeight:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 63.7
   maximumHeight:
     m_OverrideState: 1
     m_Value: 240.6
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 750
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1

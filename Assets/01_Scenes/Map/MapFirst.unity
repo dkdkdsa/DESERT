@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1093.6334, g: 944.12646, b: 871.11816, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26191,6 +26191,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1986069906476094989, guid: dd12984957c0d434a987ed98d89059da, type: 3}
+      propertyPath: cutoutStandard.clip
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986069906476094989, guid: dd12984957c0d434a987ed98d89059da, type: 3}
       propertyPath: cutoutStandard.map1
       value: 
       objectReference: {fileID: 2800000, guid: 1ab69e9b96ad9f5409665263c3c8dc31, type: 3}
@@ -26290,6 +26294,10 @@ PrefabInstance:
       propertyPath: materials.Array.data[22]
       value: 
       objectReference: {fileID: 2100000, guid: 92fc2d24d7d29cd46802f412fa56afba, type: 2}
+    - target: {fileID: 1986069906476094989, guid: dd12984957c0d434a987ed98d89059da, type: 3}
+      propertyPath: cutoutStandard.map1Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1986069906476094989, guid: dd12984957c0d434a987ed98d89059da, type: 3}
       propertyPath: edgeBase.widthCutoutGeometric
       value: 0.3
@@ -26480,7 +26488,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 92fc2d24d7d29cd46802f412fa56afba, type: 2}
     - target: {fileID: 1986069907408648207, guid: dd12984957c0d434a987ed98d89059da, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 7.06
       objectReference: {fileID: 0}
     - target: {fileID: 1986069907408648207, guid: dd12984957c0d434a987ed98d89059da, type: 3}
       propertyPath: m_LocalPosition.x
