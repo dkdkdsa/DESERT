@@ -248,7 +248,7 @@ Material:
     - _AdvancedDissolveEdgeBaseColorTransparency: 1
     - _AdvancedDissolveEdgeBaseShape: 0
     - _AdvancedDissolveEdgeBaseWidthGeometric: 0.606
-    - _AdvancedDissolveEdgeBaseWidthStandard: 0
+    - _AdvancedDissolveEdgeBaseWidthStandard: 0.187
     - _AdvancedDissolveEdgeGIMetaPassMultiplier: 1
     - _AdvancedDissolveEdgeUVDistortionStrength: 0
     - _AdvancedDissolveKeywordCutoutGeometricCount: 2
