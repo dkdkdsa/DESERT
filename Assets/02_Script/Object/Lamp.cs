@@ -31,7 +31,7 @@ public class Lamp : MonoBehaviour
         while(per < 1)
         {
 
-            per += Time.deltaTime / 2;
+            per += Time.deltaTime * 0.1f;
 
             lampRender.materials[1].SetFloat("_EmissiveExposureWeight", 1 - per);
             lampLight.intensity = Mathf.Lerp(0, 131072, per);
