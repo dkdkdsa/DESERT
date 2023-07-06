@@ -6,7 +6,7 @@ public class DarkModeManager : MonoBehaviour
 {
 
     [SerializeField] private GameObject[] darkModeObjcetArr;
-
+    
     public static DarkModeManager instance { get; private set; }
 
     private void Awake()
