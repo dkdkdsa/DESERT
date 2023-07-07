@@ -36,6 +36,7 @@ public class DarkZone : MonoBehaviour
         if (collision.transform.CompareTag("Player") && !valueSystem.darkMode)
         {
 
+            DarkModeManager.instance?.SetMode(true);
             valueSystem.darkMode = true;
             valueSystem.darkGauge = 1;
             isFading = true;

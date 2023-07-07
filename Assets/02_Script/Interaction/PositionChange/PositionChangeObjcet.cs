@@ -38,7 +38,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
     public override void OnCursorClickEvent(InteractionClickKey key)
     {
 
-        if(key == InteractionClickKey.Left && Vector3.Distance(transform.position, playerTrm.position) <= sencingRange && !isPosChanging)
+        if(key == InteractionClickKey.Left && Vector3.Distance(transform.position, playerTrm.position) <= sencingRange && !isPosChanging && !playerValueSystem.darkMode)
         {
 
             StartCoroutine(PosChangeCo());
@@ -51,7 +51,7 @@ public class PositionChangeObjcet : InteractionObjectRoot
     public override void OnCursorOnEvent()
     {
 
-        if (Vector3.Distance(transform.position, playerTrm.position) > sencingRange) return;
+        if (Vector3.Distance(transform.position, playerTrm.position) > sencingRange || !playerValueSystem.darkMode) return;
 
         UIManager.instance.GetUIObject<TextSetting>("SettingText").SetText("좌클릭으로 위치전환");
 

@@ -41,6 +41,7 @@ public class PlayerDarkMode : PlayerBehaviorRoot
 
             valueSystem.darkMode = false;
             StartCoroutine(DarkDissolveCo());
+            DarkModeManager.instance?.SetMode(false);
 
         }
 
