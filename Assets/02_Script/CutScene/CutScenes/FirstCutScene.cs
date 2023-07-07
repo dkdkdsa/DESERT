@@ -19,7 +19,7 @@ public class FirstCutScene : CutSceneRoot
     private IEnumerator CutSceneCo()
     {
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(4f);
 
         float per = 0;
 
