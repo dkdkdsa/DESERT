@@ -38,11 +38,11 @@ public class PositionChangeObjcet : InteractionObjectRoot
     public override void OnCursorClickEvent(InteractionClickKey key)
     {
 
-        if(key == InteractionClickKey.Left && Vector3.Distance(transform.position, playerTrm.position) <= sencingRange && !isPosChanging && !playerValueSystem.darkMode)
+        if(key == InteractionClickKey.Left && Vector3.Distance(transform.position, playerTrm.position) <= sencingRange && isPosChanging && !playerValueSystem.darkMode)
         {
 
             StartCoroutine(PosChangeCo());
-            playerValueSystem.posChangeObject.Play();
+            playerValueSystem.posChangeObject?.Play();
 
         }
 
