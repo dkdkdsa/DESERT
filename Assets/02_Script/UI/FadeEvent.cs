@@ -23,13 +23,18 @@ public class FadeEvent : MonoBehaviour
     public void FadeIn()
     {
 
+        var a = baseImage.color;
+        a.a = 0;
+        baseImage.color = a;
         baseImage.DOFade(1, fadeDuration).OnComplete(() => fadeInEndEvt.Invoke());
 
     }
 
     public void FadeOut()
     {
-
+        var a = baseImage.color;
+        a.a = 1;
+        baseImage.color = a;
         baseImage.DOFade(0, fadeDuration).OnComplete(() => fadeOutEndEvt.Invoke());
 
     }

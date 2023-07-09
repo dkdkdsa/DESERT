@@ -23,7 +23,7 @@ public class PlayerEventSystem : MonoBehaviour
         JumpEventExecute();
         InteractionEventExecute();
         OnUpdateEvent?.Invoke();
-        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Intro");
+        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("IntroRM");
 
     }
 

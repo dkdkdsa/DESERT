@@ -28,6 +28,8 @@ public class Lamp : MonoBehaviour
 
         float per = 0;
 
+        FindObjectOfType<PlayerValueSystem>().leverSound.Play();
+
         while(per < 1)
         {
 

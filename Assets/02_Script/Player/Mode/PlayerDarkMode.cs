@@ -32,7 +32,7 @@ public class PlayerDarkMode : PlayerBehaviorRoot
         if(rootVec > 0)
         {
 
-            valueSystem.darkGauge -= Time.deltaTime * 0.1f;
+            valueSystem.darkGauge -= Time.deltaTime * 0.25f;
 
         }
         
